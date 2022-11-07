@@ -27,7 +27,7 @@ class Postagem{
 
     public static function listar()
     {
-        $query = "select titulo, id_categoria, date";
+        $query = "select titulo, nome_categoria, date";
 
         $conexao = Conexao::conectar();
         $resultado = $conexao->query($query);
