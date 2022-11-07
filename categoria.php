@@ -13,6 +13,7 @@ class Categoria {
         $stmt->bindValue(":nome_categoria", $this->nome_categoria);
 
         $stmt->execute();
+    }
 
 
     public static function listar()
