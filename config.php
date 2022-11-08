@@ -5,5 +5,3 @@ define('NOME_SERVIDOR', 'localhost');
 define('NOME_BANCO', '');
 define('USUARIO', 'root');
 define('SENHA', '');
-
-?>
