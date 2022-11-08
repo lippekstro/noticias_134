@@ -28,6 +28,8 @@
                         <input type="password" id="senha" name="senha" value="" placeholder="Digite sua Senha">
 
                         <button id="btn" type="submit">Confirma</button>
+                         <p>Ainda não tem uma conta?</p>
+                         <a href="#">Criar conta</a>
                     </div>
 
                 </fieldset>
