@@ -6,7 +6,7 @@ class Categoria
     public $nome_categoria;
     public $id_categoria;
 
-}
+
    
 
     public function editar()
@@ -29,7 +29,7 @@ class Categoria
         $lista = $resultado->fetchAll();
         return $lista;
     }
-}
+
 
 public function deletar(){
     $query = "DELETE FROM categoria WHERE id_categoria = :id_categoria";
@@ -38,5 +38,5 @@ public function deletar(){
     $stmt->binValue(':id_categoria' , $this->id_categoria);
     $stmt->execute();
 }
-
+}
 ?>
