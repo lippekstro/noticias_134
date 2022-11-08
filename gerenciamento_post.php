@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-
+    <div id="list">
+        <table>
+        </table>
+    </div>    
 </body>
 </html>
