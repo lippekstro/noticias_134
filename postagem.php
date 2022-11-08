@@ -7,7 +7,7 @@ class Postagem{
     public $imagem;
     public $id_autor;
     public $id_categoria;    
-    public $date;
+    public $data;
     public $id_postagem;
 
 public function inserir(){
