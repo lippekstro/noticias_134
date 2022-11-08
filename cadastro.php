@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="flex">
-                <div id="cadastro">
+            <div id="cadastro">
                 <form action="" >
                 <fieldset id="flex">
                     <span class="material-symbols-outlined"  id="fontcad">person</span>
