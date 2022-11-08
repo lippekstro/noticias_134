@@ -25,30 +25,30 @@ public function inserir(){
     
 
 
-    public function editar_postagem() {
-        $query = "update postagem set titulo = :titulo, conteudo = :conteudo, imagem = :imagem, id_autor = :id_autor, id_categoria = :id_categoria, date = :date, id_postagem = :id_postagem";
-       
-        $stmt = $conexao->prepare($query);
-        $stmt->bindValue(':titulo', $this->titulo);
-        $stmt->bindValue(':conteudo', $this->conteudo);
-        $stmt->bindValue(':imagem', $this->imagem);
-        $stmt->bindValue(':id_autor', $this->id_autor);
-        $stmt->bindValue(':id_categoria', $this->id_categoria);
-        $stmt->bindValue(':date', $this->date);
-        $stmt->bindValue(':id_postagem', $this->id_postagem);
-        
-        $stmt->execute();
-    }
+public function editar_postagem() {
+    $query = "UPDATE postagem SET titulo = :titulo, conteudo = :conteudo, imagem = :imagem, id_autor = :id_autor, id_categoria = :id_categoria, data = :data WHERE id_postagem = :id_postagem";
+   
+    $stmt = $conexao->prepare($query);
+    $stmt->bindValue(':titulo', $this->titulo);
+    $stmt->bindValue(':conteudo', $this->conteudo);
+    $stmt->bindValue(':imagem', $this->imagem);
+    $stmt->bindValue(':id_autor', $this->id_autor);
+    $stmt->bindValue(':id_categoria', $this->id_categoria);
+    $stmt->bindValue(':data', $this->data);
+    $stmt->bindValue(':id_postagem', $this->id_postagem);
+    
+    $stmt->execute();
+}
 
-    public static function listar()
-    {
-        $query = "select titulo, nome_categoria, date";
+public static function listar()
+{
+    $query = "SELECT titulo, nome_categoria, conteudo, imagem, id_autor, id_categoria, data, id_postagem FROM Postagem ";
 
-        $conexao = Conexao::conectar();
-        $resultado = $conexao->query($query);
-        $lista = $resultado->fetchAll();
-        return $lista;
-    }
+    $conexao = Conexao::conectar();
+    $resultado = $conexao->query($query);
+    $lista = $resultado->fetchAll();
+    return $lista;
+}
     
 
 
