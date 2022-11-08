@@ -27,4 +27,14 @@ class Categoria
         $lista = $resultado->fetchAll();
         return $lista;
     }
+
+    public function criar()
+    {
+       $query = "INSERT INTO  categoria (nome, idade) VALUES (:nome, :idade)";
+       $conexao = Conexao::conectar();
+       $stmt = $conexao->prepare($query);
+       $stmt->bindValue(':nome', $this->nome_categoria);
+       $stmt->bindValue(':idade', $this->id_categoria);
+       $stmt->execute();
+    }
 }
