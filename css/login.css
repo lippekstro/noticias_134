@@ -53,6 +53,13 @@ fieldset{
     border-radius: 20px;
     padding: 40px;
 }
+p{
+    font-size: 10px;
+}
+#login a{
+    font-size: 10px;
+    
+}
 
 
  
