@@ -49,4 +49,14 @@ class Usuario
 
         $stmt->execute();
     }
+
+    public function listar(){ 
+        $query = "SELECT * FROM usuario";
+        $conexao = conexao::conectar();
+        $resultado = $conexao->query($query);
+        $lista = $resultado->fetchAll();
+        return $lista;
+       
+    }
+
 }
