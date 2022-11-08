@@ -22,7 +22,7 @@ class Categoria
 
     public static function listar()
     {
-        $query = "select nome_categoria";
+        $query = "select * from categoria";
 
         $conexao = Conexao::conectar();
         $resultado = $conexao->query($query);
