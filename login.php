@@ -22,7 +22,7 @@
                     <span class="material-symbols-outlined" id="fontcad">person</span>
                     <div>
                         <label for="nome">Email</label>
-                        <input type="name" id="name" name="name" value="" placeholder="nome de usuario" autofocus>
+                        <input type="name" id="name" name="name" value="" placeholder="seu email" autofocus>
 
                         <label for="senha">Senha</label>
                         <input type="password" id="senha" name="senha" value="" placeholder="Digite sua Senha">
