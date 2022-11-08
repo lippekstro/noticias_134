@@ -7,7 +7,7 @@ class Categoria
     public $id_categoria;
 
 
-   
+
 
     public function editar()
     {
@@ -31,12 +31,12 @@ class Categoria
     }
 
 
-public function deletar(){
-    $query = "DELETE FROM categoria WHERE id_categoria = :id_categoria";
-    $conexao = Conexao::conectar();
-    $stmt = $conexao->prepare($query);
-    $stmt->binValue(':id_categoria' , $this->id_categoria);
-    $stmt->execute();
+    public function deletar()
+    {
+        $query = "DELETE FROM categoria WHERE id_categoria = :id_categoria";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(':id_categoria', $this->id_categoria);
+        $stmt->execute();
+    }
 }
-}
-?>
