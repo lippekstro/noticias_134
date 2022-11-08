@@ -41,7 +41,7 @@ class Postagem
     public function editar_postagem()
     {
         $query = "update postagem set titulo = :titulo, conteudo = :conteudo, imagem = :imagem, id_autor = :id_autor, id_categoria = :id_categoria, date = :date, id_postagem = :id_postagem";
-
+        $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':titulo', $this->titulo);
         $stmt->bindValue(':conteudo', $this->conteudo);
