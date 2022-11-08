@@ -1,6 +1,7 @@
 <?php
 
-class Postagem{
+class Postagem
+{
     public $id_post;
     public $titulo;
     public $conteudo;
@@ -22,7 +23,6 @@ public function inserir(){
     $stmt->execute();
 }
 
-    
 
 
 public function editar_postagem() {
@@ -43,7 +43,6 @@ public function editar_postagem() {
 public static function listar()
 {
     $query = "SELECT titulo, nome_categoria, conteudo, imagem, id_autor, id_categoria, data, id_postagem FROM Postagem ";
-
     $conexao = Conexao::conectar();
     $resultado = $conexao->query($query);
     $lista = $resultado->fetchAll();
@@ -52,5 +51,20 @@ public static function listar()
     
 
 
-}
+    public function deletar()
+    {
+        $query = "DELETE FROM Postagem WHERE id_postagem=:id_postagem";
+        //deleta pelo id
+        $conexao = Conexao::conectar();
+        // cria conexao
+        $stmt = $conexao->prepare($query);
+        // prepara a query
+        $stmt->bindValue("id_postagem", $this->id_postagem);
+        // vincula o valor
+        $stmt->execute();
+        // executa
+    }
 
+
+
+}
