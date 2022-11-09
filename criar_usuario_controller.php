@@ -13,7 +13,7 @@ try {
     $usuario->senha = $senha;
     $usuario->email = $email;
 
-    $usuario->inserir();
+    $usuario->criar();
 
     header("Location: index.php");
 } catch (Exception $e) {
