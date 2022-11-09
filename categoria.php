@@ -7,6 +7,8 @@ class Categoria
     public $id_categoria;
 
 
+
+
     public function editar()
     {
         $query = "UPDATE categoria SET nome_categoria = :nome_categoria WHERE id_categoria = :id_categoria";
@@ -20,13 +22,14 @@ class Categoria
 
     public static function listar()
     {
-        $query = "select nome_categoria";
+        $query = "select * from categoria";
 
         $conexao = Conexao::conectar();
         $resultado = $conexao->query($query);
         $lista = $resultado->fetchAll();
         return $lista;
     }
+
 
     public function criar()
     {
@@ -36,5 +39,14 @@ class Categoria
        $stmt->bindValue(':nome', $this->nome_categoria);
        $stmt->bindValue(':idade', $this->id_categoria);
        $stmt->execute();
+
+
+    public function deletar()
+    {
+        $query = "DELETE FROM categoria WHERE id_categoria = :id_categoria";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(':id_categoria', $this->id_categoria);
+        $stmt->execute();
     }
 }
