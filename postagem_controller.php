@@ -28,14 +28,14 @@ try{
     
     $postagem->inserir();
 
-    setcookie("msg", "Postagem_Adicionada_com_Sucesso");
-
-
+  
 
     header('Location: index.php');
 
 }catch(Exception $e){
-    Erro::trataErro($e);
+    echo $e->getMessage();
+    
+    
 }
 
 ?>
