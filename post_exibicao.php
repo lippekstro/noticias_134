@@ -21,7 +21,7 @@
             <div style="width: 50vw; margin: auto; padding-top: 1cm;">
                 <img id="img_post" src="https://s2.glbimg.com/Ut37qguDndhnDZgz-SQswTV8sI4=/620x466/top/e.glbimg.com/og/ed/f/original/2022/02/21/apink_teaser_black_ver.jpg" alt="">
                 <p class="text_post" style="text-align: justify; margin: 2cm;">O sexteto, formado por Chorong, Bomi, Eunji, Naeun, Namjoo e Hayoung, é um dos grupos femininos mais antigos ainda ativos e continuam colecionando sucesso atrás de sucesso na carreira.
-                    Para a nova title Dilemma, elas se uniram mais uma vez com o duo de produtores Black Eyed Pilseung, nome por trás de outros hits do grupo como I'm So Sick, de 2018, %%, de 2019, e Dumhdurum, de 2020. Apesar da parceria, elas também participaram da composição de seis das 11 faixas do álbum.
+                    Para a nova title Dilemma, elas se uniram mais uma veoz com o duo de produtores Black Eyed Pilseung, nome por trás de outros hits do grupo como I'm So Sick, de 2018, %%, de 2019, e Dumhdurum, de 2020. Apesar da parceria, elas também participaram da composição de seis das 11 faixas do álbum.
                     
                     Em um papo com Quem, elas celebraram o lançamento e a importância de estarem envolvidas na criação de sua música, além de refletirem sobre seus 10 anos de carreira e revelarem o desejo de conhecer o Brasil.
                     

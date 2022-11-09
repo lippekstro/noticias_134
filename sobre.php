@@ -19,7 +19,7 @@
         <div class="sobre">
             <div class="block">
                 <h2>Missão</h2>
-                <p> Levar ao leitor informação de qualidade, fidelidade e com integridade, e que ajude a promover o conhecimento sobre turismo e seus impactos <p>
+                <p> Levar ao leitor informaçãoo de qualidade, fidelidade e com integridade, e que ajude a promover o conhecimento sobre turismo e seus impactos <p>
             </div>
           
             <div class="block">
