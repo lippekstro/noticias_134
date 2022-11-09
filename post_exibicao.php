@@ -4,7 +4,7 @@ require_once "cabecalho.php";
 <div style="display: flex;" id="centro">
     <div class="post">
         <div style="width: 60vw; margin: auto; text-align: justify;">
-            <h3 style="margin: 1.5 0; font-size:36px; text-align: justify;">Apink: "A maior recompensa é poder receber tanto amor "</h1>
+            <h3 style="margin: 1.5 0; font-size:36px; text-align: justify;">Apink: "A maior recompensa é poder receber tanto amor"</h1>
                 <p>Apink é um grupo feminino sul-coreano formado pela Plan A Entertainment em 2011. É composto por cinco integrantes: Chorong, Bomi, Eunji, Namjoo e Hayoung. Sua formação original incluía Hong Yoo-kyung|YooKyung e Son Naeun|Na-Eun. Elas estrearam em 21 de abril de 2011 </p>
                 <h3 style="color: black; font-size:19px; margin-top: 1cm ;">Por AUTOR</h3>
                 <p style="margin-bottom: 1cm;">09/11/2022 13h07</p>

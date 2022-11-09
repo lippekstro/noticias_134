@@ -124,6 +124,10 @@ li a {
     align-items: center;
 }
 
+.conteiner-search button {
+  color: white;
+}
+
 
 .material-symbols-outlined {
     border-radius: 50%;
@@ -311,8 +315,8 @@ textarea {
     margin-left: 370px;
 }
 
-#barra-pesquisa {
-    border: none;
+#busca {
+  border: none;
   margin: 0;
   padding: 0;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
@@ -446,11 +450,9 @@ h2 {
 
 }
 
-.material-symbols-outlined {
+#cadastro .material-symbols-outlined {
   font-size: 80px;
   color: dodgerblue;
-
-
 }
 
 #btn {

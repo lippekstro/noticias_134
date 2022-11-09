@@ -13,7 +13,7 @@
     flex-direction: column;
     
 }
-.material-symbols-outlined{
+#login .material-symbols-outlined{
     font-size: 80px;
     color: dodgerblue;
 }

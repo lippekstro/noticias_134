@@ -27,7 +27,7 @@
                     <div class="conteiner-search">
                         <form id="pesquisa" action="">
                             <div class="conteiner-form-input-btn">
-                                <input size="200" type="search" name="" id="barra-pesquisa">
+                                <input size="200" type="search" name="busca" id="busca">
                                 <button type="submit"><span class="material-symbols-outlined">search</span></button>
                             </div>
                         </form>

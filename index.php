@@ -7,43 +7,14 @@ require_once "cabecalho.php";
 
 <div class="flex">
     <div class="card" style="width: 13%">
-        <img src="img/logo.png" alt="Avatar">
-        <div class="container">
-            <h4><b>TÍTULO</b></h4>
-            <p>Notícia</p>
-        </div>
+        <a href="post_exibicao.php?id_postagem=#">
+            <img src="img/logo.png" alt="Avatar">
+            <div class="container">
+                <h4><b>TÍTULO</b></h4>
+                <p>Notícia</p>
+            </div>
+        </a>
     </div>
-
-
-
-    <div class="card" style="width: 13%">
-        <img src="img/logo.png" alt="Avatar">
-        <div class="container">
-            <h4><b>TÍTULO</b></h4>
-            <p>Notícia</p>
-        </div>
-    </div>
-
-
-
-    <div class="card" style="width: 13%">
-        <img src="img/logo.png" alt="Avatar">
-        <div class="container">
-            <h4><b>TÍTULO</b></h4>
-            <p>Notícia</p>
-        </div>
-    </div>
-
-
-    <div class="card" style="width: 13%">
-        <img src="img/logo.png" alt="Avatar">
-        <div class="container">
-            <h4><b>TÍTULO</b></h4>
-            <p>Notícia</p>
-        </div>
-    </div>
-
-
 </div>
 </main>
 
