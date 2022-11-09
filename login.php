@@ -16,7 +16,7 @@ require_once "cabecalho.php";
 
                     <button id="btn" type="submit">Confirma</button>
                     <p>Ainda não tem uma conta?</p>
-                    <a href="#">Criar conta</a>
+                    <a href="cadastro.php">Criar conta</a>
                 </div>
             </fieldset>
         </form>

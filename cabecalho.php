@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/gerenc_post.css">
     <title>Document</title>
 </head>
 
@@ -29,6 +31,7 @@
                                 <button type="submit"><span class="material-symbols-outlined">search</span></button>
                             </div>
                         </form>
+
                         <div>
                             <a href="login.php"><span id="account_circle" class="material-symbols-outlined">account_circle</span></a>
                         </div>
@@ -45,7 +48,7 @@
                             <ul id="links-global">
                                 <li><a href="noticia.php?cat=esportes">Esportes</a></li>
                                 <li><a href="noticia.php?cat=tecnologia">Tecnologia</a></li>
-                                <li><a href="noticia.php?cat=economia">Econômia</a></li>
+                                <li><a href="noticia.php?cat=economia">Economia</a></li>
                                 <li><a href="noticia.php?cat=local">Notícias Locais</a></li>
                             </ul>
                         </div>
