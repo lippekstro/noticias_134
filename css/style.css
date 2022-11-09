@@ -1,9 +1,117 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background-color: rgb(213, 218, 224);
+    box-sizing: border-box;
+  }
+
+.exibicao_post {
+    align-items: center;
+    padding: 2cm;
+    margin: 2cm;
+    
+}
+
+#img_post {
+    display: block; width: 50%; margin: auto;
+    box-shadow: 8px 7px 20px rgba(83, 83, 83, 0.397);
+}
+
+.text_post {
+    text-align: justify;
+    text-indent: 25px;
+}
+
+
+.titulo {
+    padding-bottom: 0.7cm;
+    letter-spacing: 5px;
+    margin: 1cm;
+    }
+    
+  
+    .titulo2 {
+      font-size: 37px;
+      padding-bottom: 10px;
+      }
+    
+    .quemsomos {
+      font-size: 18px;
+    } 
+    
+    h1, h2 {
+      color: blue;
+    }
+  
+    #centro {
+      width: 60vw;
+      margin: auto;
+    }
+  
+    .sobre {
+      padding: 40px;
+      display:flex;
+      text-align: center;
+      justify-items: center;
+      flex-wrap:nowrap;
+      
+    }
+    
+    .block {
+      margin: 20px;
+      height: 200px;
+      flex-direction:row;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      align-items:center;
+      padding-left: 5%;
+      padding-right: 5%;
+      
+      /*flex-direction: column;
+      align-items: flex-start;*/
+  }
+    
+  
+    p {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    
+    h2 {
+      letter-spacing: 3px;
+    }
+    
+    .listavalores {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      
+    }
+    
+    .listavalores li {
+      padding-bottom: 7px;
+      font-size: 18px;
+      
+    }
+    
+    .obj {
+      text-align: center;
+      margin-left: 12%;
+      margin-right: 12%;
+      margin-bottom: 10%;
+      padding: 1cm;
+    }
+  
+  .post {
+    text-align: center;
+    padding: 20px;
+    /*border: 1px solid black;*/
+    height: 100vw
+  }
 body {
     font-family: 'Catamaran', sans-serif;
-}
-*{
-    margin: 0%;
-    padding: 0%;
 }
 #cadastro{
     display: flex;
