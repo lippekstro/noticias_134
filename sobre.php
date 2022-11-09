@@ -12,7 +12,7 @@
 <body>
     <div id="centro">
         <div style="text-align:center; margin: 3cm;">
-          <h1 class="titulo">Sobre Nós</h1>
+          <h1 class="titulo">Sobre Nos</h1>
           <p class="quemsomos"> Criada em 2022 e idealizada por estudantes do SENAC-MA, somos um portal local de noticias do Maranhão e do Mundo. O jornal ... tem por finalidade proporcionar aos leitores conhecimento imparcial e objetivo, assim como auxiliar na formação de profissionais da área jornalística. A equipe do jornal é formada por estudantes do curso de Programador Web. <p>
         </div>
 

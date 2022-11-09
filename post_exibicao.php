@@ -25,7 +25,7 @@
                     
                     Em um papo com Quem, elas celebraram o lançamento e a importância de estarem envolvidas na criação de sua música, além de refletirem sobre seus 10 anos de carreira e revelarem o desejo de conhecer o Brasil.
                     
-                    (Naeun não participou da entrevista e não está promovendo o álbum com as outras integrantes por um conflito de agenda).</p>
+                    (Naeun não participou da entrevista e não está promovendo o álbum com as outras integrantes por um conflito de agenda)..</p>
             </div>
         </div>
 
