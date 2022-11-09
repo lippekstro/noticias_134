@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -109,3 +110,52 @@
     /*border: 1px solid black;*/
     height: 100vw
   }
+body {
+    font-family: 'Catamaran', sans-serif;
+}
+#cadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    width: min-content;
+    height: 100vh;
+}
+#flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.material-symbols-outlined{
+    font-size: 80px;
+    color: dodgerblue;
+    
+
+}
+#btn {
+    width: 100%;
+    background-color: dodgerblue;
+    padding: 5px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    margin-top: 10%;
+    height: 30px;
+    font-size: 0.5cm; 
+}
+button{
+    cursor: pointer;
+}
+input {
+   border-radius: 5px;
+   height: 20px;
+   
+}
+
+fieldset{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 40px;
+}
