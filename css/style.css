@@ -105,7 +105,7 @@ li a {
 }
 
 #container-logo {
-    width: 10%;
+    width: 20%;
     margin-left: 20px;
 
 }
@@ -113,6 +113,7 @@ li a {
 .container-barra {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     margin: 2rem;
 
@@ -407,13 +408,12 @@ h2 {
   margin-top: 30px;
   margin-bottom: 20px;
   font-size: 18px;
-
 }
 
 .listavalores li {
   padding-bottom: 7px;
   font-size: 18px;
-
+  color: black;
 }
 
 .obj {
