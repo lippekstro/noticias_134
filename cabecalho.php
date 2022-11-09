@@ -14,10 +14,7 @@
 </head>
 
 <body>
-
     <header>
-
-
         <div class="navbar">
             <div class="container-barra">
                 <div>
@@ -56,7 +53,6 @@
                     <li><a href="sobre.php">Sobre nós</a></li>
                 </ul>
             </div>
-
         </div>
     </header>
     <main>
