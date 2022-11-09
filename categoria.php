@@ -31,6 +31,16 @@ class Categoria
     }
 
 
+    public function criar()
+    {
+       $query = "INSERT INTO  categoria (nome, idade) VALUES (:nome, :idade)";
+       $conexao = Conexao::conectar();
+       $stmt = $conexao->prepare($query);
+       $stmt->bindValue(':nome', $this->nome_categoria);
+       $stmt->bindValue(':idade', $this->id_categoria);
+       $stmt->execute();
+
+
     public function deletar()
     {
         $query = "DELETE FROM categoria WHERE id_categoria = :id_categoria";
