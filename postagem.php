@@ -72,3 +72,19 @@ class Postagem
         // executa
     }
 }
+    public function carregar(){
+        $query = "SELECT titulo, nome_categoria, conteudo, imagem, id_autor, id_categoria, data_pub, id_postagem FROM Postagem ";
+        $query = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(":id_postagem", $this->id_postagem);
+        $stmt->execute();
+        $lista = $stmt->fetch();
+        $this->id_post = $lista['id_post'];
+        $this->titulo = $lista['titulo'];  
+        $this->conteudo = $lista['conteudo'];
+        $this->imagem = $lista['imagem'];
+        $this->id_autor = $lista['id_autor'];
+        $this->id_categoria = $lista['id_categoria'];
+        $this->data_pub = $lista['data_pub'];
+
+}
