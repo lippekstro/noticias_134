@@ -30,6 +30,9 @@
     cursor: pointer;
     background-color: #a9a9a978;
     font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .btn:active {
     transform:scale(1.1);

@@ -8,8 +8,8 @@ require_once "cabecalho.php";
         <div class="slides"><img src="https://source.unsplash.com/random?landscape,night" /></div>
         <div class="slides"><img src="https://source.unsplash.com/random?landscape,city" /></div>
 
-        <button class="btn btn_direita">&rArr;</button>
-        <button class="btn btn_esquerda">&lArr;</button>
+        <button class="btn btn_direita"><span>&rArr;</span></button>
+        <button class="btn btn_esquerda"><span>&lArr;</span></button>
     </div>
 </div>
 
