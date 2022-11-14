@@ -6,6 +6,16 @@ class Categoria
     public $nome_categoria;
     public $id_categoria;
 
+
+    public function __construct($id_categoria=false)
+    {
+        if($id_categoria){
+            $this->id_categoria = $id_categoria;
+            $this->carregar();
+        }
+    }
+    
+
     public function editar()
     {
         $query = "UPDATE categoria SET nome_categoria = :nome_categoria WHERE id_categoria = :id_categoria";
