@@ -7,14 +7,28 @@ class Usuario
     public $senha;
     public $id_usuario;
     public $nivel_acesso;
-
-    public function __construct($id_usuario = false){
+    
+     public function __construct($id_usuario = false){
         if($id_usuario){
             $this->id_usuario= $id_usuario;
             $this->carregar();
         }
     }
 
+    public function carregar() {
+        $query = "SELECT nome, email, senha, nivel_acesso FROM usuario WHERE id_usuario = :id_usuario";
+        $conexao = conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(':id_usuario', $this->id_usuario);
+        $stmt->execute();
+
+        $lista = $stmt->fetch();
+        
+        $this->nome = $lista['nome'];
+        $this->email = $lista['email'];
+        $this->senha = $lista['senha'];
+        $this->nivel_acesso = $lista['nivel_acesso'];
+    }
 
     public function deletar()
     {
