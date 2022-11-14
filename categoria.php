@@ -54,4 +54,16 @@ class Categoria
         $stmt->bindValue(':id_categoria', $this->id_categoria);
         $stmt->execute();
     }
+    public function carregar(){
+        $query = "SELECT nome_categoria FROM Categoria 
+        WHERE id_categoria = :id_categoria";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(':id_categoria', $this->id_categoria);
+        $stmt->execute();
+
+        $lista = $stmt->fetch();
+        $this->id_categoria = $lista['id_categoria'];
+
+    }
 }
