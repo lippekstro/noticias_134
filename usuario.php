@@ -47,6 +47,7 @@ class Usuario
         $stmt->bindValue(":nome", $this->nome);
         $stmt->bindValue(":email", $this->email);
         $stmt->bindValue(":senha", $this->senha);
+        $stmt->execute();
     }
 
     public function editar_admin()
@@ -58,6 +59,7 @@ class Usuario
         $stmt->bindValue(":email", $this->email);
         $stmt->bindValue(":senha", $this->senha);
         $stmt->bindValue(":nivel_acesso", $this->nivel_acesso);
+        $stmt->execute();
     }
 
     public function criar()
