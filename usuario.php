@@ -8,6 +8,7 @@ class Usuario
     public $id_usuario;
     public $nivel_acesso;
 
+    
 
     public function deletar()
     {
