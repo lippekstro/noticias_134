@@ -43,3 +43,9 @@
     top: 45%;
     right: 2%;
 }
+
+.container-carrosel {
+    display: flex;
+    justify-content: center;
+    margin: 4px;
+}

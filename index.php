@@ -2,13 +2,15 @@
 require_once "cabecalho.php";
 ?>
 
-<div class="slide">
-    <div class="slides"><img src="https://source.unsplash.com/random?landscape,mountain" /></div>
-    <div class="slides"><img src="https://source.unsplash.com/random?landscape,night" /></div>
-    <div class="slides"><img src="https://source.unsplash.com/random?landscape,city" /></div>
+<div class="container-carrosel">
+    <div class="slide">
+        <div class="slides"><img src="https://source.unsplash.com/random?landscape,mountain" /></div>
+        <div class="slides"><img src="https://source.unsplash.com/random?landscape,night" /></div>
+        <div class="slides"><img src="https://source.unsplash.com/random?landscape,city" /></div>
 
-    <button class="btn btn_direita">&rArr;</button>
-    <button class="btn btn_esquerda">&lArr;</button>
+        <button class="btn btn_direita">&rArr;</button>
+        <button class="btn btn_esquerda">&lArr;</button>
+    </div>
 </div>
 
 <h1 class="h1">Ultimas Notícias</h1>
