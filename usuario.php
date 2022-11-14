@@ -7,6 +7,13 @@ class Usuario
     public $senha;
     public $id_usuario;
     public $nivel_acesso;
+    
+     public function __construct($id_usuario = false){
+        if($id_usuario){
+            $this->id_usuario= $id_usuario;
+            $this->carregar();
+        }
+    }
 
     public function carregar() {
         $query = "SELECT nome, email, senha, nivel_acesso FROM usuario WHERE id_usuario = :id_usuario";
