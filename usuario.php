@@ -30,6 +30,7 @@ class Usuario
         $this->nivel_acesso = $lista['nivel_acesso'];
     }
 
+
     public function deletar()
     {
         $query = "DELETE FROM usuario WHERE id_usuario=:id_usuario";

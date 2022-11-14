@@ -10,6 +10,13 @@ class Postagem
     public $id_categoria;
     public $data_pub;
 
+    public function __construct($id_post = false){
+        if($id_post){
+            $this->id_post= $id_post;
+            $this->carregar();
+        }
+    }
+
     public function inserir()
     {
         $query = "INSERT INTO postagem (titulo, conteudo, imagem, id_autor, id_categoria) VALUES (:titulo, :conteudo, :imagem, :id_autor, :id_categoria)";
@@ -27,7 +34,7 @@ class Postagem
 
     public function editar_postagem()
     {
-        $query = "UPDATE postagem SET titulo = :titulo, conteudo = :conteudo, imagem = :imagem, id_autor = :id_autor, id_categoria = :id_categoria, data_pub = :data_pub WHERE id_postagem = :id_postagem";
+        $query = "UPDATE postagem SET titulo = :titulo, conteudo = :conteudo, imagem = :imagem, id_autor = :id_autor, id_categoria = :id_categoria, data_pub = :data_pub WHERE id_postagem = :id_post";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':titulo', $this->titulo);
@@ -36,7 +43,7 @@ class Postagem
         $stmt->bindValue(':id_autor', $this->id_autor);
         $stmt->bindValue(':id_categoria', $this->id_categoria);
         $stmt->bindValue(':data_pub', $this->data_pub);
-        $stmt->bindValue(':id_postagem', $this->id_postagem);
+        $stmt->bindValue(':id_postagem', $this->id_post);
 
         $stmt->execute();
     }
@@ -51,7 +58,6 @@ class Postagem
     }
 
 
-
     public function deletar()
     {
         $query = "DELETE FROM Postagem WHERE id_postagem=:id_postagem";
@@ -60,7 +66,7 @@ class Postagem
         // cria conexao
         $stmt = $conexao->prepare($query);
         // prepara a query
-        $stmt->bindValue("id_postagem", $this->id_postagem);
+        $stmt->bindValue("id_postagem", $this->id_post);
         // vincula o valor
         $stmt->execute();
         // executa
