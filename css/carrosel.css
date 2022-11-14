@@ -28,7 +28,7 @@
     border-radius: 50%;
     z-index: 10px;
     cursor: pointer;
-    background-color: darkgray;
+    background-color: #a9a9a978;
     font-size: 18px;
 }
 .btn:active {
@@ -47,5 +47,5 @@
 .container-carrosel {
     display: flex;
     justify-content: center;
-    margin: 4px;
+    margin-top: 40px;
 }

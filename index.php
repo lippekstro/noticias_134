@@ -17,7 +17,7 @@ require_once "cabecalho.php";
 
 
 <div class="flex">
-    <div class="card" style="width: 13%">
+    <div class="card">
         <a href="post_exibicao.php?id_postagem=#">
             <img src="https://source.unsplash.com/random?landscape,mountain" alt="Noticia">
             <div class="container">
