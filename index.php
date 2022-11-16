@@ -1,5 +1,14 @@
 <?php
 require_once "cabecalho.php";
+require_once "postagem.php"
+
+try {
+    $postagem = new $postagem();
+    $lista = $postagem->listar();
+}  catch (Exception $e) {
+    Echo $e -> getMessage;
+}
+
 ?>
 
 <div class="container-carrosel">
@@ -17,15 +26,18 @@ require_once "cabecalho.php";
 
 
 <div class="flex">
+    <?php foreach ($lista as $item): ?>
     <div class="card">
         <a href="post_exibicao.php?id_postagem=#">
             <img src="https://source.unsplash.com/random?landscape,mountain" alt="Noticia">
             <div class="container">
-                <h4><b>TÍTULO</b></h4>
+                <h4><b><?= $item['titulo'] ?></b></h4>
+                <p><?= $item['conteudo']?></p>
                 <p>Notícia</p>
             </div>
         </a>
     </div>
+    <?php endforeach; ?>
 </div>
 </main>
 
