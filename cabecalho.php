@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/gerenc_post.css">
     <link rel="stylesheet" href="css/carrosel.css">
+    <link rel="stylesheet" href="css/rodape.css">
     <title>Document</title>
 </head>
 

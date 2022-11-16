@@ -23,6 +23,6 @@
         </article>
 
     </footer>
-    
+    <script src="js/carrosel.js"></script>
 </body>
 </html>

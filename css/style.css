@@ -4,7 +4,9 @@
   box-sizing: border-box;
   font-family: 'Catamaran', sans-serif;
 }
-
+body {
+  height: 100vh;
+}
 .navbar {
   background-image: linear-gradient(to right, #5ce1e6, #5e17eb);
   display: flex;
@@ -70,6 +72,8 @@ li a {
 
 .container {
   padding: 2px 16px;
+  max-height: 200px;
+  overflow: hidden;
 }
 
 .flex {

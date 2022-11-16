@@ -67,7 +67,7 @@ class Postagem
 
     public static function listar()
     {
-        $query = "SELECT id_post, titulo, conteudo, imagem, data_pub, id_usuario, id_categoria, FROM postagem ";
+        $query = "SELECT id_post, titulo, conteudo, imagem, data_pub, id_usuario, id_categoria FROM postagem ";
         $conexao = Conexao::conectar();
         $resultado = $conexao->query($query);
         $lista = $resultado->fetchAll();

@@ -1,12 +1,13 @@
 <?php
 require_once "cabecalho.php";
 require_once "postagem.php";
+require_once "conexao.php";
 
 try {
-    $postagem = new $postagem();
+    $postagem = new Postagem();
     $lista = $postagem->listar();
 }  catch (Exception $e) {
-    Echo $e -> getMessage;
+    Echo $e->getMessage();
 }
 
 ?>
@@ -34,10 +35,13 @@ try {
             <div class="container">
                 <h4><b><?= $item['titulo'] ?></b></h4>
                 <p><?= $item['conteudo']?></p>
-                <p>Notícia</p>
             </div>
         </a>
     </div>
     <?php endforeach; ?>
 </div>
 
+<?php 
+require_once "rodape.php";
+
+?>
