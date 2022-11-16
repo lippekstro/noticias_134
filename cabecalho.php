@@ -1,3 +1,21 @@
+<?php 
+require_once 'categoria.php';
+require_once  'conexao.php';
+
+try{
+    $lista_categorias = Categoria::listar();
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
+
+
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -48,10 +66,9 @@
                         <li>Categoria</li>
                         <div class="dropdown-content">
                             <ul id="links-global">
-                                <li><a href="noticias.php?cat=esportes">Esportes</a></li>
-                                <li><a href="noticias.php?cat=tecnologia">Tecnologia</a></li>
-                                <li><a href="noticias.php?cat=economia">Economia</a></li>
-                                <li><a href="noticias.php?cat=local">Notícias Locais</a></li>
+                                <?php foreach ($lista_categorias as $categoria):?>
+                                <li><a href="noticias.php?cat=esportes<?=$categoria['nome']?>&id_categoria=<?=$categoria['id_categoria']?>"><?=$categoria['nome']?></a></li>
+                                 <?php endforeach;?>       
                             </ul>
                         </div>
                     </div>
