@@ -13,18 +13,20 @@ require_once "cabecalho.php";
     </div>
 </div>
 
-<h1 class="h1">Ultimas Notícias</h1>
+<div class="container-noticias">
+    <h1>Ultimas Notícias</h1>
 
 
-<div class="flex">
-    <div class="card">
-        <a href="post_exibicao.php?id_postagem=#">
-            <img src="https://source.unsplash.com/random?landscape,mountain" alt="Noticia">
-            <div class="container">
-                <h4><b>TÍTULO</b></h4>
-                <p>Notícia</p>
-            </div>
-        </a>
+    <div class="flex">
+        <div class="card">
+            <a href="post_exibicao.php?id_postagem=#">
+                <img src="https://source.unsplash.com/random?landscape,mountain" alt="Noticia">
+                <div class="container">
+                    <h4><b>TÍTULO</b></h4>
+                    <p>Notícia</p>
+                </div>
+            </a>
+        </div>
     </div>
 </div>
 </main>
