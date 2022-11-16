@@ -48,10 +48,10 @@
                         <li>Categoria</li>
                         <div class="dropdown-content">
                             <ul id="links-global">
-                                <li><a href="noticia.php?cat=esportes">Esportes</a></li>
-                                <li><a href="noticia.php?cat=tecnologia">Tecnologia</a></li>
-                                <li><a href="noticia.php?cat=economia">Economia</a></li>
-                                <li><a href="noticia.php?cat=local">Notícias Locais</a></li>
+                                <li><a href="noticias.php?cat=esportes">Esportes</a></li>
+                                <li><a href="noticias.php?cat=tecnologia">Tecnologia</a></li>
+                                <li><a href="noticias.php?cat=economia">Economia</a></li>
+                                <li><a href="noticias.php?cat=local">Notícias Locais</a></li>
                             </ul>
                         </div>
                     </div>
