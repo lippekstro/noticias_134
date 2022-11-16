@@ -27,9 +27,4 @@ require_once "cabecalho.php";
         </a>
     </div>
 </div>
-</main>
 
-<script src="js/carrosel.js"></script>
-</body>
-
-</html>
