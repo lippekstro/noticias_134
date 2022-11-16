@@ -1,8 +1,11 @@
 <?php
 require_once "cabecalho.php";
+$nome_categoria = $_GET['cat'];
+
+
 ?>
 <div class="titulo_noticia_categoria">   <h1>
-    ESPORTES
+    <?= $nome_categoria ?>
     </h1>
 </div>
  
