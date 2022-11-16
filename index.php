@@ -16,8 +16,3 @@ require_once "cabecalho.php";
         </a>
     </div>
 </div>
-</main>
-
-</body>
-
-</html>
