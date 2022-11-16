@@ -479,3 +479,8 @@ fieldset {
   border-radius: 20px;
   padding: 40px;
 }
+
+.titulo_noticia_categoria {
+  text-align: center;
+  
+}
