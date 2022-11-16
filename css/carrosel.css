@@ -28,8 +28,11 @@
     border-radius: 50%;
     z-index: 10px;
     cursor: pointer;
-    background-color: darkgray;
+    background-color: #a9a9a978;
     font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .btn:active {
     transform:scale(1.1);
@@ -42,4 +45,10 @@
 .btn_direita {
     top: 45%;
     right: 2%;
+}
+
+.container-carrosel {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }

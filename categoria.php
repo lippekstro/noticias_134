@@ -6,15 +6,13 @@ class Categoria
     public $nome_categoria;
     public $id_categoria;
 
-
-    public function __construct($id_categoria=false)
+    public function __construct($id_categoria = false)
     {
-        if($id_categoria){
+        if ($id_categoria) {
             $this->id_categoria = $id_categoria;
             $this->carregar();
         }
     }
-    
 
     public function editar()
     {
@@ -53,5 +51,18 @@ class Categoria
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':id_categoria', $this->id_categoria);
         $stmt->execute();
+    }
+
+    public function carregar()
+    {
+        $query = "SELECT nome_categoria FROM Categoria 
+        WHERE id_categoria = :id_categoria";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(':id_categoria', $this->id_categoria);
+        $stmt->execute();
+
+        $lista = $stmt->fetch();
+        $this->nome_categoria = $lista['nome_categoria'];
     }
 }
