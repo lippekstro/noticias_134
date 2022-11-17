@@ -61,7 +61,7 @@ li a {
   transition: 0.3s;
   margin: 50px;
   width: 23%;
-
+  border-radius: 15px;
 }
 
 .card:hover {
@@ -70,22 +70,26 @@ li a {
   cursor: pointer;
 }
 
+.card a{
+  text-decoration: none;
+}
+
 .container {
   padding: 2px 16px;
-  max-height: 200px;
+  max-height: 100px;
   overflow: hidden;
 }
 
 .flex {
   display: flex;
-  height: 500px;
   justify-content: center;
-  align-items: center;
   flex-direction: row;
 }
 
 .card img {
   width: 100%;
+  max-height: 200px;
+  border-radius: 15px 15px 0 0;
 
 }
 

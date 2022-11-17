@@ -1,6 +1,6 @@
 <?php
 require_once 'categoria.php';
-require_once  'conexao.php';
+require_once 'conexao.php';
 
 try {
     $lista_categorias = Categoria::listar();
@@ -8,13 +8,7 @@ try {
     echo $e->getMessage();
 }
 
-
-
-
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -32,7 +26,7 @@ try {
     <link rel="stylesheet" href="css/gerenc_post.css">
     <link rel="stylesheet" href="css/carrosel.css">
     <link rel="stylesheet" href="css/rodape.css">
-    <link rel="stylesheet" href="css/mystyle.css">
+    
     <link rel="stylesheet" href="css/edicao_categoria.css">
     <title>Document</title>
 </head>
