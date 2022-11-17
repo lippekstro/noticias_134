@@ -1,8 +1,8 @@
-<?php 
+<?php
 require_once 'categoria.php';
 require_once  'conexao.php';
 
-try{
+try {
     $lista_categorias = Categoria::listar();
 } catch (Exception $e) {
     echo $e->getMessage();
@@ -66,9 +66,9 @@ try{
                         <li>Categoria</li>
                         <div class="dropdown-content">
                             <ul id="links-global">
-                                <?php foreach ($lista_categorias as $categoria):?>
-                                <li><a href="noticias.php?cat=esportes<?=$categoria['nome']?>&id_categoria=<?=$categoria['id_categoria']?>"><?=$categoria['nome']?></a></li>
-                                 <?php endforeach;?>       
+                                <?php foreach ($lista_categorias as $categoria) : ?>
+                                    <li><a href="noticias.php?cat=<?= $categoria['nome'] ?>&id_categoria=<?= $categoria['id_categoria'] ?>"><?= $categoria['nome'] ?></a></li>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
                     </div>

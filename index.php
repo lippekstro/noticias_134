@@ -6,8 +6,8 @@ require_once "conexao.php";
 try {
     $postagem = new Postagem();
     $lista = $postagem->listar();
-}  catch (Exception $e) {
-    Echo $e->getMessage();
+} catch (Exception $e) {
+    echo $e->getMessage();
 }
 
 ?>
@@ -27,6 +27,7 @@ try {
     <h1>Ultimas Notícias</h1>
 
 
+
 <div class="flex">
     <?php foreach ($lista as $item): ?>
     <div class="card">
@@ -35,13 +36,14 @@ try {
             <div class="container">
                 <h4><b><?= $item['titulo'] ?></b></h4>
                 <p><?= $item['conteudo']?></p>
+                    </div>
+                </a>
             </div>
-        </a>
+        <?php endforeach; ?>
     </div>
-    <?php endforeach; ?>
 </div>
 
-<?php 
+<?php
 require_once "rodape.php";
 
 ?>
