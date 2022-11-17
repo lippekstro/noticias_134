@@ -30,7 +30,7 @@ try {
 <div class="flex">
     <?php foreach ($lista as $item): ?>
     <div class="card">
-        <a href="post_exibicao.php?id_postagem=#">
+        <a href="post_exibicao.php?id_post=<?= $item['id_post']?>">
             <img src="https://source.unsplash.com/random?landscape,mountain" alt="Noticia">
             <div class="container">
                 <h4><b><?= $item['titulo'] ?></b></h4>
