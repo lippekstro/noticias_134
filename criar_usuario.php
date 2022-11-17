@@ -2,7 +2,7 @@
 require_once "cabecalho.php";
 ?>
 
-<div class="card">
+<div class="card-usuario">
     <div class="img-usuario">
         <img src="img/novo-usuario2.png" id="img-usuario">
     </div>

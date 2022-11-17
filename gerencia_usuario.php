@@ -14,7 +14,7 @@
     <div id="exibe">
             <div class="flex-container space-between" id="topo">
                 <div id="campo_pesquisa">
-                    <form action="" class="flex-container">
+                    <form action="" class="flex-usuario">
                         <input type="search" name="busca" id="busca">
                         <button type="submit" id="lupa">
                             <span class="material-symbols-sharp">search</span>
@@ -65,7 +65,7 @@
         
                 </tr>
                 <tr>
-                    <th scope="row">3</th>
+                    <th scope="row">4</th>
                     <td>Vicente</td>
                     <td>ejuhfjberjn@gmail.com</td>
                     <td>1234567</td>
@@ -76,7 +76,7 @@
                     
                 </tr>
                 <tr>
-                    <th scope="row">3</th>
+                    <th scope="row">5</th>
                     <td>Bruna</td>
                     <td>ejuhfjberjn@gmail.com</td>
                     <td>1234567</td>
@@ -86,7 +86,7 @@
                     
                 </tr>
                 <tr>
-                    <th scope="row">3</th>
+                    <th scope="row">6</th>
                     <td>Mike</td>
                     <td>ejuhfjberjn@gmail.com</td>
                     <td>1234567</td>
