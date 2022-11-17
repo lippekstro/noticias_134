@@ -54,8 +54,18 @@ try {
                             </div>
                         </form>
 
-                        <div>
+                        <div class="dropdown">
                             <a href="login.php"><span id="account_circle" class="material-symbols-outlined">account_circle</span></a>
+                            <div class="dropdown-content">
+                                <ul id="">
+                                    <li><a>Editar perfil</a></li>
+                                    <li><a>GER. categorias</a></li>
+                                    <li><a>GER. usuário</a></li>
+                                    <li><a>GER. postagem</a></li>
+                                    <li><a>Sair</a></li>
+                                </ul>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
