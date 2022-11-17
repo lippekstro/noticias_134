@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/gerenc_post.css">
+    <link rel="stylesheet" href="css/carrosel.css">
     <title>Document</title>
 </head>
 
@@ -27,7 +28,7 @@
                     <div class="conteiner-search">
                         <form id="pesquisa" action="">
                             <div class="conteiner-form-input-btn">
-                                <input size="200" type="search" name="busca" id="busca">
+                                <input size="40" type="search" name="busca" id="busca">
                                 <button type="submit"><span class="material-symbols-outlined">search</span></button>
                             </div>
                         </form>
