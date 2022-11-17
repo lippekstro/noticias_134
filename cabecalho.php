@@ -32,6 +32,8 @@ try {
     <link rel="stylesheet" href="css/gerenc_post.css">
     <link rel="stylesheet" href="css/carrosel.css">
     <link rel="stylesheet" href="css/rodape.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/edicao_categoria.css">
     <title>Document</title>
 </head>
 
