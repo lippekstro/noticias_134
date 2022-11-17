@@ -25,6 +25,7 @@ require_once "cabecalho.php";
         </table>
     </div>
 </div>
-</body>
 
-</html>
+<?php
+require_once "rodape.php";
+?>

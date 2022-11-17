@@ -4,9 +4,11 @@
   box-sizing: border-box;
   font-family: 'Catamaran', sans-serif;
 }
+
 body {
   height: 100vh;
 }
+
 .navbar {
   background-image: linear-gradient(to right, #5ce1e6, #5e17eb);
   display: flex;
@@ -70,7 +72,7 @@ li a {
   cursor: pointer;
 }
 
-.card a{
+.card a {
   text-decoration: none;
 }
 
@@ -305,6 +307,7 @@ textarea {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
   z-index: 1;
+  right: 2%;
 }
 
 
@@ -490,5 +493,9 @@ fieldset {
 
 .titulo_noticia_categoria {
   text-align: center;
-  
+
+}
+
+#menu-login-icone li a {
+  color: black;
 }
