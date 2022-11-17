@@ -27,14 +27,15 @@ try {
     <h1>Ultimas Notícias</h1>
 
 
-    <div class="flex">
-        <?php foreach ($lista as $item) : ?>
-            <div class="card">
-                <a href="post_exibicao.php?id_postagem=#">
-                    <img src="https://source.unsplash.com/random?landscape,mountain" alt="Noticia">
-                    <div class="container">
-                        <h4><b><?= $item['titulo'] ?></b></h4>
-                        <p><?= $item['conteudo'] ?></p>
+
+<div class="flex">
+    <?php foreach ($lista as $item): ?>
+    <div class="card">
+        <a href="post_exibicao.php?id_post=<?= $item['id_post']?>">
+            <img src="https://source.unsplash.com/random?landscape,mountain" alt="Noticia">
+            <div class="container">
+                <h4><b><?= $item['titulo'] ?></b></h4>
+                <p><?= $item['conteudo']?></p>
                     </div>
                 </a>
             </div>
