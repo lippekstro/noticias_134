@@ -6,10 +6,10 @@ require_once "cabecalho.php";
     <div class="criar-usuario">
         <h2 class="criar-cat">Criar uma nova Categoria</h2>
 
-        <form action="#" method="post">
+        <form action="criar_categoria_controller.php" method="post">
             <div class="label-usuario">
                 <label for="nome"></label>
-                <input type="text" id="categoria" name="nome">
+                <input type="text" id="nome" name="nome">
             </div>
 
             <div>
