@@ -1,6 +1,7 @@
 <?php
 require_once "cabecalho.php";
 ?>
+
 <div id="centro">
   <div style="text-align:center; margin: 3cm;">
     <h1 class="titulo">Sobre Nos</h1>
@@ -25,7 +26,7 @@ require_once "cabecalho.php";
   <p class="obj">Temos como objetivo conscientizar, informar, divulgar, fazer conhecer, por isto levamos informação de qualidade para todas as classes sociais. Estando em contato direto com a população e lutando por melhorias para ela, para seu bairro e sua cidade. Trabalhando como um canal direto entre as camadas sociais mais modestas, entre trabalhadores, empresários, comerciantes e os governantes, através da comunicação, deixando mais próximos as empresas, o produto e o consumidor.
   <p>
 
-  <div style="text-align: center;">
+  <div id="container-valores">
     <h2>Valores</h2>
     <ul class="listavalores" type="none">
       <li>Ética
@@ -43,6 +44,7 @@ require_once "cabecalho.php";
 </div>
 
 </div>
-</body>
 
-</html>
+<?php
+require_once "rodape.php";
+?>

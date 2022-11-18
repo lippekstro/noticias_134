@@ -22,13 +22,15 @@ try {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cabecalho.css">
+    <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/gerenc_post.css">
     <link rel="stylesheet" href="css/carrosel.css">
     <link rel="stylesheet" href="css/rodape.css">
     <link rel="stylesheet" href="css/mystyle.css">
     <link rel="stylesheet" href="css/edicao_categoria.css">
-    <title>Document</title>
+    <title>Noticias 134</title>
 </head>
 
 <body>

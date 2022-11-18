@@ -13,15 +13,13 @@ footer {
 
     position: sticky;
     top: 100%;
-
 }
 
 .footer-content {
     width: 60%;
     display: flex;
     justify-content: space-between;
-
-
+    align-items: center;
 }
 
 .footer-content p {

@@ -1,7 +1,6 @@
 <?php
 require_once "cabecalho.php";
 require_once "postagem.php";
-require_once "conexao.php";
 
 try {
     $postagem = new Postagem();
