@@ -1,25 +1,23 @@
 <?php
+
 require_once 'usuario.php';
 require_once 'conexao.php';
 
 try {
-    $usuario = new usuario();
-    
     $nome = $_POST['nome'];
-    $senha = $_POST['senha'];
-    $email = $_POST['email'];      
-    $senha = password_hash($senha, PASSWORD_DEFAULT);
+    $email = $_POST["email"];
+    $nivel_acesso = $_POST["nivel_acesso"];
+    $id_usuario = $_POST["id_usuario"];
 
+    $usuario = new Usuario($id_usuario);
     $usuario->nome = $nome;
-    $usuario->senha = $senha;
     $usuario->email = $email;
+    $usuario->nivel_acesso = $nivel_acesso;
 
-    $usuario->criar();
+    $usuario->editar_admin();
 
     header("Location: index.php");
+
 } catch (Exception $e) {
     echo $e->getMessage();
 }
-
-
-?>
