@@ -31,6 +31,9 @@ try {
     <link rel="stylesheet" href="css/rodape.css">
     <link rel="stylesheet" href="css/mystyle.css">
     <link rel="stylesheet" href="css/edicao_categoria.css">
+    <link rel="stylesheet" href="css/adicionar_user.css">
+    <link rel="stylesheet" href="css/criar_categoria.css">
+    <link rel="stylesheet" href="css/gerenc_user.css">
     <title>Noticias 134</title>
 </head>
 
@@ -57,7 +60,7 @@ try {
                                 <ul id="menu-login-icone">
                                     <li><a href="">Editar perfil</a></li>
                                     <li><a href="gerenciar_cat.php">GER. categorias</a></li>
-                                    <li><a href="gerencia_usuario.php">GER. usuário</a></li>
+                                    <li><a href="gerenciar_usuario.php">GER. usuário</a></li>
                                     <li><a href="gerenciamento_post.php">GER. postagem</a></li>
                                     <li><a href="">Sair</a></li>
                                 </ul>
