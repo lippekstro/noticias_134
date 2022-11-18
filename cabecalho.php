@@ -26,6 +26,7 @@ try {
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/gerenc_post.css">
+    <link rel="stylesheet" href="css/gerenc_cat.css">
     <link rel="stylesheet" href="css/carrosel.css">
     <link rel="stylesheet" href="css/rodape.css">
     <link rel="stylesheet" href="css/mystyle.css">
@@ -55,7 +56,7 @@ try {
                             <div class="dropdown-content">
                                 <ul id="menu-login-icone">
                                     <li><a href="">Editar perfil</a></li>
-                                    <li><a href="">GER. categorias</a></li>
+                                    <li><a href="gerenciar_cat.php">GER. categorias</a></li>
                                     <li><a href="gerencia_usuario.php">GER. usuário</a></li>
                                     <li><a href="gerenciamento_post.php">GER. postagem</a></li>
                                     <li><a href="">Sair</a></li>
