@@ -1,4 +1,4 @@
-<<?php
+<?php
 
     require_once 'config.php';
 
@@ -12,16 +12,3 @@
             return $conn;
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-    ?>
