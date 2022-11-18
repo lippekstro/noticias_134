@@ -6,15 +6,13 @@ require_once 'conexao.php';
 try {
     $nome = $_POST['nome'];
     $email = $_POST["email"];
-    $nivel_acesso = $_POST["nivel_acesso"];
     $id_usuario = $_POST["id_usuario"];
 
     $usuario = new Usuario($id_usuario);
     $usuario->nome = $nome;
     $usuario->email = $email;
-    $usuario->nivel_acesso = $nivel_acesso;
 
-    $usuario->editar_admin();
+    $usuario->editar_usuario();
 
     header("Location: index.php");
 } catch (Exception $e) {
