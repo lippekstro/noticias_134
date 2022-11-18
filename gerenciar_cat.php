@@ -1,5 +1,12 @@
 <?php
 require_once "cabecalho.php";
+require_once "categoria.php";
+
+try {
+    $lista = Categoria::listar();
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
 ?>
 
 <div id="flex">
@@ -13,21 +20,13 @@ require_once "cabecalho.php";
                     <th>Editar</th>
                     <th>Deletar</th>
                 </tr>
+                <?php foreach($lista as $categoria): ?>
                 <tr>
-                    <td></td>
-                    <td><span class="material-symbols-outlined" id="btn_edit">edit</span></td>
-                    <td><span class="material-symbols-outlined" id="btn_delete">delete</span></a></td>
+                    <td><?= $categoria['nome']?></td>
+                    <td><a href="edicao_categoria.php?id_categoria=<?=$categoria['id_categoria']?>"><span class="material-symbols-outlined" id="btn_edit">edit</span></a></td>
+                    <td><a href="delete_categoria_controller.php?id_categoria=<?=$categoria['id_categoria']?>"><span class="material-symbols-outlined" id="btn_delete">delete</span></a></td>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td><span class="material-symbols-outlined" id="btn_edit">edit</span></td>
-                    <td><span class="material-symbols-outlined" id="btn_delete">delete</span></a></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><span class="material-symbols-outlined" id="btn_edit">edit</span></td>
-                    <td><span class="material-symbols-outlined" id="btn_delete">delete</span></td>
-                </tr>
+                <?php endforeach; ?>
             </thead>
         </table>
     </div>

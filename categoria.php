@@ -16,10 +16,11 @@ class Categoria
 
     public function editar()
     {
-        $query = "UPDATE categoria SET nome_categoria = :nome_categoria WHERE id_categoria = :id_categoria";
+        $query = "UPDATE categoria SET nome = :nome WHERE id_categoria = :id_categoria";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
-        $stmt->bindValue(":nome_categoria", $this->nome_categoria);
+        $stmt->bindValue(":nome", $this->nome_categoria);
+        $stmt->bindValue(":id_categoria", $this->id_categoria);
 
         $stmt->execute();
     }
@@ -55,7 +56,7 @@ class Categoria
 
     public function carregar()
     {
-        $query = "SELECT nome_categoria FROM Categoria 
+        $query = "SELECT nome FROM Categoria 
         WHERE id_categoria = :id_categoria";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
@@ -63,6 +64,6 @@ class Categoria
         $stmt->execute();
 
         $lista = $stmt->fetch();
-        $this->nome_categoria = $lista['nome_categoria'];
+        $this->nome_categoria = $lista['nome'];
     }
 }
