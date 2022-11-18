@@ -7,18 +7,18 @@ require_once "cabecalho.php";
         <img src="img/novo-usuario2.png" id="img-usuario">
     </div>
     <div class="criar-usuario">
-        <form action="" method="post">
+        <form action="criar_usuario_controller.php" method="post">
             <div class="label-usuario">
                 <label for="nome">Nome: </label>
                 <input type="text" id="nome" name="nome">
             </div>
             <div class="label-usuario">
-                <label for="idade">Email: </label>
+                <label for="email">Email: </label>
                 <input type="text" id="email" name="email">
             </div>
             <div class="label-usuario">
-                <label for="idade">Senha: </label>
-                <input type="number" id="senha" name="senha">
+                <label for="senha">Senha: </label>
+                <input type="password" id="senha" name="senha">
             </div>
             <div>
                 <input type="submit" value="CADASTRAR" id="bottom-cadastrar">
