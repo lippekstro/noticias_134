@@ -23,7 +23,7 @@ try{
         </div>
 
         <div style="width: 50vw; margin: auto; padding-top: 1cm;">
-            <img id="img_post" src="https://source.unsplash.com/random?landscape,mountain" alt="">
+            <img id="img_post" src="data:image/jpg;charset=utf8;base64,<?= base64_encode($noticia['imagem']); ?>" alt="">
             <p class="text_post" style="text-align: justify; margin: 2cm;"><?= $noticia['conteudo']?></p>
         </div>
     </div>
