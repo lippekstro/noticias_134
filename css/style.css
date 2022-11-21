@@ -7,6 +7,8 @@
 
 body {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 #texto {
@@ -170,6 +172,7 @@ textarea {
   width: 50%;
   margin: auto;
   box-shadow: 8px 7px 20px rgba(83, 83, 83, 0.397);
+  max-height: 400px;
 }
 
 .text_post {
@@ -275,18 +278,6 @@ h2 {
   color: dodgerblue;
 }
 
-#btn {
-  width: 100%;
-  background-color: dodgerblue;
-  padding: 5px;
-  border-radius: 20px;
-  border: none;
-  color: white;
-  margin-top: 10%;
-  height: 30px;
-  font-size: 0.5cm;
-}
-
 button {
   cursor: pointer;
 }
@@ -313,4 +304,14 @@ fieldset {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.botao{
+  background-color: dodgerblue;
+  padding: 5px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  width: auto;
+  font-size: 0.5cm;
 }

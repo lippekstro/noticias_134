@@ -15,14 +15,14 @@ try {
             <form action="" class="flex-usuario">
                 <input type="search" name="busca" id="busca">
                 <button type="submit" id="lupa">
-                    <span class="material-symbols-sharp">search</span>
+                    <span class="material-symbols-outlined">search</span>
                 </button>
             </form>
         </div>
     </div>
 
     <div class="lista-dados">
-        <table class="table table-hover" style="width: 80vw; margin: auto;">
+        <table class="table table-hover">
             <thead>
                 <tr style="color: rgb(255, 255, 255);">
                     <th>Nome</th>

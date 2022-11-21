@@ -31,6 +31,7 @@ try {
     <link rel="stylesheet" href="css/rodape.css">
     <link rel="stylesheet" href="css/mystyle.css">
     <link rel="stylesheet" href="css/edicao_categoria.css">
+    <link rel="stylesheet" href="css/cadastrar_post.css">
     <title>Noticias 134</title>
 </head>
 

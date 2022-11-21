@@ -1,39 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/cadastrar_post.css">
-</head>
-<body>
-    <section class="sessao-post" id="postagem">
-        <div class="post-wrapper">
-            <div class="post-right">
-                <h1>Cadastro de Postagem</h1>
-                <form>
-                    <div class="mov">
-                    <button type="submit" class="btn btn-submit">SELECIONAR IMAGEM</button>
-                </div>
-                <div class="move">
-                    <button type="submit" class="btn btn-submit">CATEGORIAS</button>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" class="field" id="titulo">
-                        <label for="titulo" class="field-label">TITULO</label>
-                    </div>
-                    <div class="input-group">
-                        <textarea class="field" id="conteudo"></textarea>
-                        <label for="conteudo" class="field-label">CONTEUDO</label>
-                    </div>
-                    <div class="mover">
-                    <button type="submit" class="btn btn-submit">POSTAR</button>
-                </div>
-                </form>
+<?php
+require_once "cabecalho.php";
+?>
 
+<div class="container-flex">
+    <h1>Cadastro de Postagem</h1>
+    <form>
+        <div class="container-flex">
+            <div>
+                <input type="file" name="imagem" id="imagem">
+            </div>
+            <div class="container-input">
+                <div>
+                    <label for="titulo">TITULO</label>
+                    <input type="text" id="titulo" name="titulo" size="50" style="height: 30px;">
+                </div>
+                <div style="display: flex; align-items:center;">
+                    <label for="categoria" style="margin-right: 4px;">CATEGORIA</label>
+                    <select name="categoria" id="categoria">
+                        <option value="asda">adasdasdas</option>
+                        <option value="asda">adas</option>
+                        <option value="asda">adas</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label for="conteudo">CONTEUDO</label>
+                <textarea id="conteudo" cols="200" rows="20"></textarea>
+            </div>
+            <div>
+                <button type="submit" class="botao">POSTAR</button>
             </div>
         </div>
-    </section>
-</body>
-</html>
+    </form>
+</div>
+
+<?php
+require_once "rodape.php";
+?>

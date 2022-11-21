@@ -24,10 +24,6 @@
     font-size: 0.5cm;
 }
 
-button {
-    cursor: pointer;
-}
-
 input {
     border-radius: 5px;
     height: 20px;

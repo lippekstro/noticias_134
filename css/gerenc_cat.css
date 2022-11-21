@@ -49,6 +49,7 @@ th.nome {
 
 #btn-add {
     align-self: flex-start;
+    margin: 4px 0;
 }
 
 #btn-add span {

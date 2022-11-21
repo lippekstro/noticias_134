@@ -32,6 +32,6 @@ require_once "cabecalho.php";
     </div>
 </div>
 
-</body>
-
-</html>
+<?php
+require_once "rodape.php";
+?>
