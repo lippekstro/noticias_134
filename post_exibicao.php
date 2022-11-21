@@ -17,8 +17,8 @@ try{
         <div style="width: 60vw; margin: auto; text-align: justify;">
             <h3 style="margin: 1.5 0; font-size:36px; text-align: justify;"><?= $noticia['titulo']?></h3>
                
-                <h3 style="color: black; font-size:19px; margin-top: 1cm ;">Por <?= $noticia['nome_autor']?></h3>
-                <p style="margin-bottom: 1cm;"><?= $noticia['data_pub']?></p>
+                <h3 style="color: black; font-size:19px; margin-top: 20px ;">Por <?= $noticia['nome_autor']?></h3>
+                <p style="margin-bottom: 20px;"><?= $noticia['data_pub']?></p>
                 <hr><br>
         </div>
 

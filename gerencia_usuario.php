@@ -10,9 +10,9 @@ try {
 
 ?>
 <div id="exibe">
-    <div class="flex-container space-between" id="topo">
+    <div class="flex-user espaço-entre" id="topo">
         <div id="campo_pesquisa">
-            <form action="" class="flex-usuario">
+            <form action="" class="flex-user">
                 <input type="search" name="busca" id="busca">
                 <button type="submit" id="lupa">
                     <span class="material-symbols-outlined">search</span>
@@ -22,25 +22,25 @@ try {
     </div>
 
     <div class="lista-dados">
-        <table class="table table-hover">
-            <thead>
-                <tr style="color: rgb(255, 255, 255);">
-                    <th>Nome</th>
-                    <th>Email</th>
-                    <th>Nivel de Acesso</th>
-                    <th colspan="2"><a href="criar_usuario.php">ADICIONE</a></th>
+        <table class="table table-hover" style="width: 80vw; margin: auto; border: 1px solid rgba(214, 212, 212, 0.693); border-collapse: collapse; box-shadow: 8px 7px 20px rgba(83, 83, 83, 0.192); text-align: center;">
+            <thead class="thead-color">
+                <tr class="borda-tabela" style="color: rgb(255, 255, 255);">
+                    <th class="borda-tabela">Nome</th>
+                    <th class="borda-tabela">Email</th>
+                    <th class="borda-tabela">Nivel de Acesso</th>
+                    <th class="borda-tabela" colspan="2"><a href="criar_usuario.php">ADICIONE</a></th>
                 </tr>
             </thead>
 
             <tbody>
                 <?php foreach ($lista as $usuario) : ?>
-                    <tr>
-                        <td><?= $usuario['nome'] ?></td>
-                        <td><?= $usuario['email'] ?></td>
-                        <td><?= $usuario['nivel_acesso'] ?></td>
+                    <tr class="borda-tabela">
+                        <td class="borda-tabela"><?= $usuario['nome'] ?></td>
+                        <td class="borda-tabela"><?= $usuario['email'] ?></td>
+                        <td class="borda-tabela"><?= $usuario['nivel_acesso'] ?></td>
 
-                        <td><a href="edita_usuario_admin.php?id_usuario=<?= $usuario['id_usuario'] ?>"><span class="material-symbols-outlined" id="btn-edit">edit</span></a></td>
-                        <td><a href="delete_usuario_controller.php?id_usuario=<?= $usuario['id_usuario'] ?>"><span class="material-symbols-outlined" id="btn-delete">delete_forever</span></a></td>
+                        <td class="borda-tabela"><a href="edita_usuario_admin.php?id_usuario=<?= $usuario['id_usuario'] ?>"><span class="material-symbols-outlined" id="botaoedit">edit</span></a></td>
+                        <td class="borda-tabela"><a href="delete_usuario_controller.php?id_usuario=<?= $usuario['id_usuario'] ?>"><span class="material-symbols-outlined" id="botaodelete">delete_forever</span></a></td>
                     </tr>
                 <?php endforeach; ?>
 
