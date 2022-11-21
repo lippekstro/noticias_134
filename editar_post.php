@@ -4,7 +4,7 @@ require_once "postagem.php";
 require_once "categoria.php";
 
 try {
-    $lista = Categoria::lista();
+    $lista = Categoria::listar();
 } catch (Exception $e) {
     echo $e->getMessage();
 }
