@@ -4,7 +4,7 @@ require_once "cabecalho.php";
 
 <div class="container-flex">
     <h1>Cadastro de Postagem</h1>
-    <form>
+    <form action="criar_postagem_controller.php" method="post">
         <div class="container-flex">
             <div>
                 <input type="file" name="imagem" id="imagem">
