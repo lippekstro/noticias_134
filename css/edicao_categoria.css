@@ -1,5 +1,15 @@
-
-
+#btn{
+    background-color: dodgerblue;
+    padding: 5px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    height: 30%;
+    font-size: 0.5cm;
+}
+button{
+    cursor: pointer;
+}
 #flex {
     display: flex;
     align-items: center;

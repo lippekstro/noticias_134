@@ -7,8 +7,7 @@ try {
     
     $nome = $_POST['nome'];
     $senha = $_POST['senha'];
-    $email = $_POST['email'];      
-    $senha = password_hash($senha, PASSWORD_DEFAULT);
+    $email = $_POST['email'];     
 
     $usuario->nome = $nome;
     $usuario->senha = $senha;
@@ -20,6 +19,7 @@ try {
 } catch (Exception $e) {
     echo $e->getMessage();
 }
+
 
 
 ?>

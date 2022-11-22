@@ -15,7 +15,6 @@ try {
 <div id="flex">
     <div id="gerenc">
         <h1 id="gp">Gerenciamento De Postagem</h1>
-        <button id="btn-add"><a href="cadastrar_post.php"><span class="material-symbols-outlined">add</span></a></button>
         <table>
             <thead>
                 <tr>
@@ -25,16 +24,14 @@ try {
                     <th>Editar</th>
                     <th>Deletar</th>
                 </tr>
-                <?php foreach ($lista as $postagem): ?>
                 <tr>
-                    <td><?= $postagem['titulo'] ?></td>
-                    <td><?= $postagem['data_pub'] ?></td>
-                    <td><?= $postagem['nome_autor'] ?></td>
-                    <td><a href="editar_post.php?id_post=<?= $postagem['id_post'] ?>"><span class="material-symbols-outlined" id="btn_edit">edit</span></a></td>
-                    <td><a href="delete_postagem_controller.php?id_post=<?= $postagem['id_post'] ?>"><span class="material-symbols-outlined" id="btn_delete">delete</span></a></td>
+                    <td>fvgaerg</td>
+                    <td>fvgaerg</td>
+                    <td>fvgaerg</td>
+                    <td><a href="editar.php?id_pessoa=<?= $item['id_pessoa'] ?>"><span class="material-symbols-outlined" id="btn_edit">edit</span></a></td>
+                    <td><a href="delete.php?id_pessoa=<?= $item['id_pessoa'] ?>"><span class="material-symbols-outlined" id="btn_delete">delete</span></a></td>
 
                 </tr>
-                <?php endforeach ?>
             </thead>
         </table>
     </div>

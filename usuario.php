@@ -41,24 +41,24 @@ class Usuario
     }
     public function editar_usuario()
     {
-        $query = "UPDATE usuario SET nome = :nome, email = :email WHERE id_usuario = :id_usuario";
+        $query = "UPDATE usuario SET nome = :nome, email = :email, senha = :senha WHERE id_usuario = :id_usuario";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(":nome", $this->nome);
         $stmt->bindValue(":email", $this->email);
-        $stmt->bindValue(":id_usuario", $this->id_usuario);
+        $stmt->bindValue(":senha", $this->senha);
         $stmt->execute();
     }
 
     public function editar_admin()
     {
-        $query = "UPDATE usuario SET nome = :nome, email = :email, nivel_acesso = :nivel_acesso WHERE id_usuario = :id_usuario";
+        $query = "UPDATE usuario SET nome = :nome, email = :email, senha = :senha, nivel_acesso = :nivel_acesso WHERE id_usuario = :id_usuario";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(":nome", $this->nome);
-        $stmt->bindValue(":email", $this->email);      
+        $stmt->bindValue(":email", $this->email);
+        $stmt->bindValue(":senha", $this->senha);
         $stmt->bindValue(":nivel_acesso", $this->nivel_acesso);
-        $stmt->bindValue(":id_usuario", $this->id_usuario);
         $stmt->execute();
     }
 
@@ -74,7 +74,7 @@ class Usuario
         $stmt->execute();
     }
 
-    public static function listar()
+    public function listar()
     {
         $query = "SELECT * FROM usuario";
         $conexao = conexao::conectar();

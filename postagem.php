@@ -51,12 +51,15 @@ class Postagem
 
     public function editar_postagem()
     {
-        $query = "UPDATE postagem SET titulo = :titulo, conteudo = :conteudo, id_categoria = :id_categoria WHERE id_post = :id_post";
+        $query = "UPDATE postagem SET titulo = :titulo, conteudo = :conteudo, imagem = :imagem, id_usuario = :id_usuario, id_categoria = :id_categoria, data_pub = :data_pub WHERE id_post = :id_post";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':titulo', $this->titulo);
         $stmt->bindValue(':conteudo', $this->conteudo);
+        $stmt->bindValue(':imagem', $this->imagem);
+        $stmt->bindValue(':id_usuario', $this->id_usuario);
         $stmt->bindValue(':id_categoria', $this->id_categoria);
+        $stmt->bindValue(':data_pub', $this->data_pub);
         $stmt->bindValue(':id_post', $this->id_post);
 
         $stmt->execute();
