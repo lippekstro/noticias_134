@@ -11,16 +11,16 @@ try {
 ?>
 
 <div id="flex">
-<form action="editar_categoria_controller.php" method="POST">
-    <input type="hidden" name="id_categoria" value="<?=$categoria->id_categoria ?>">
-    <div id="nome">
-        <label for="">Nome da Categoria</label>
-        <input type="text" id="categoria" name="categoria" value="<?= $categoria->nome_categoria ?>">
-    </div>
-    <div>
-        <button id="btn" type="submit">Alterar</button>
-    </div>
-</form>
+    <form action="editar_categoria_controller.php" method="POST">
+        <input type="hidden" name="id_categoria" value="<?= $categoria->id_categoria ?>">
+        <div id="nome">
+            <label for="">Nome da Categoria</label>
+            <input type="text" id="categoria" name="categoria" value="<?= $categoria->nome_categoria ?>">
+        </div>
+        <div>
+            <button id="btn" type="submit">Alterar</button>
+        </div>
+    </form>
 </div>
 
 <?php

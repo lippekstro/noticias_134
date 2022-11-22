@@ -1,6 +1,7 @@
 <?php
 require_once 'categoria.php';
 require_once 'conexao.php';
+session_start();
 
 try {
     $lista_categorias = Categoria::listar();
@@ -31,9 +32,7 @@ try {
     <link rel="stylesheet" href="css/rodape.css">
     <link rel="stylesheet" href="css/mystyle.css">
     <link rel="stylesheet" href="css/edicao_categoria.css">
-    <link rel="stylesheet" href="css/adicionar_user.css">
-    <link rel="stylesheet" href="css/criar_categoria.css">
-    <link rel="stylesheet" href="css/gerenc_user.css">
+    <link rel="stylesheet" href="css/cadastrar_post.css">
     <title>Noticias 134</title>
 </head>
 
@@ -56,15 +55,20 @@ try {
 
                         <div class="dropdown">
                             <a href="login.php"><span id="account_circle" class="material-symbols-outlined">account_circle</span></a>
-                            <div class="dropdown-content">
-                                <ul id="menu-login-icone">
-                                    <li><a href="">Editar perfil</a></li>
-                                    <li><a href="gerenciar_cat.php">GER. categorias</a></li>
-                                    <li><a href="gerenciar_usuario.php">GER. usuário</a></li>
-                                    <li><a href="gerenciamento_post.php">GER. postagem</a></li>
-                                    <li><a href="">Sair</a></li>
-                                </ul>
-                            </div>
+                            <?php if (isset($_SESSION['usuario'])) : ?>
+                                <div class="dropdown-content">
+                                    <ul id="menu-login-icone">
+                                        <li><a href="edita_usuario.php">Editar perfil</a></li>
+                                        <?php if ($_SESSION['usuario']['nivel_acesso'] >= 3) : ?>
+                                            <li><a href="gerenciar_cat.php">GER. categorias</a></li>
+                                            <li><a href="gerencia_usuario.php">GER. usuário</a></li>
+                                            <li><a href="gerenciamento_post.php">GER. postagem</a></li>
+                                        <?php endif; ?>
+
+                                        <li><a href="logout.php">Sair</a></li>
+                                    </ul>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>

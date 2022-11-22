@@ -3,25 +3,25 @@ require_once "cabecalho.php";
 ?>
 <div id="flex">
     <div id="cadastro">
-        <form action="">
+        <form action="criar_usuario_controller.php" method="POST">
             <fieldset id="flex">
                 <span class="material-symbols-outlined" id="fontcad">person</span>
 
                 <div>
                     <label for="nome">NOME</label>
-                    <input type="text" id="Nome" name="Nome">
+                    <input type="text" id="nome" name="nome">
                 </div>
 
 
                 <div>
-                    <label for="e-mail">E-MAIL</label>
-                    <input type="text" id="E-MAIL" name="E-MAIL">
+                    <label for="email">E-MAIL</label>
+                    <input type="text" id="email" name="email">
                 </div>
 
 
                 <div>
                     <label for="senha">SENHA</label>
-                    <input type="password" id="Senha" name="Senha">
+                    <input type="password" id="senha" name="senha">
                 </div>
 
                 <div>
@@ -32,6 +32,6 @@ require_once "cabecalho.php";
     </div>
 </div>
 
-</body>
-
-</html>
+<?php
+require_once "rodape.php";
+?>

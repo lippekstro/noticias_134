@@ -7,15 +7,17 @@ class Usuario
     public $senha;
     public $id_usuario;
     public $nivel_acesso;
-    
-     public function __construct($id_usuario = false){
-        if($id_usuario){
-            $this->id_usuario= $id_usuario;
+
+    public function __construct($id_usuario = false)
+    {
+        if ($id_usuario) {
+            $this->id_usuario = $id_usuario;
             $this->carregar();
         }
     }
 
-    public function carregar() {
+    public function carregar()
+    {
         $query = "SELECT nome, email, senha, nivel_acesso FROM usuario WHERE id_usuario = :id_usuario";
         $conexao = conexao::conectar();
         $stmt = $conexao->prepare($query);
@@ -23,13 +25,12 @@ class Usuario
         $stmt->execute();
 
         $lista = $stmt->fetch();
-        
+
         $this->nome = $lista['nome'];
         $this->email = $lista['email'];
         $this->senha = $lista['senha'];
         $this->nivel_acesso = $lista['nivel_acesso'];
     }
-
 
     public function deletar()
     {
@@ -39,26 +40,27 @@ class Usuario
         $stmt->bindValue(":id_usuario", $this->id_usuario);
         $stmt->execute();
     }
+
     public function editar_usuario()
     {
-        $query = "UPDATE usuario SET nome = :nome, email = :email, senha = :senha WHERE id_usuario = :id_usuario";
+        $query = "UPDATE usuario SET nome = :nome, email = :email WHERE id_usuario = :id_usuario";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(":nome", $this->nome);
         $stmt->bindValue(":email", $this->email);
-        $stmt->bindValue(":senha", $this->senha);
+        $stmt->bindValue(":id_usuario", $this->id_usuario);
         $stmt->execute();
     }
 
     public function editar_admin()
     {
-        $query = "UPDATE usuario SET nome = :nome, email = :email, senha = :senha, nivel_acesso = :nivel_acesso WHERE id_usuario = :id_usuario";
+        $query = "UPDATE usuario SET nome = :nome, email = :email, nivel_acesso = :nivel_acesso WHERE id_usuario = :id_usuario";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(":nome", $this->nome);
         $stmt->bindValue(":email", $this->email);
-        $stmt->bindValue(":senha", $this->senha);
         $stmt->bindValue(":nivel_acesso", $this->nivel_acesso);
+        $stmt->bindValue(":id_usuario", $this->id_usuario);
         $stmt->execute();
     }
 
@@ -74,7 +76,7 @@ class Usuario
         $stmt->execute();
     }
 
-    public function listar()
+    public static function listar()
     {
         $query = "SELECT * FROM usuario";
         $conexao = conexao::conectar();

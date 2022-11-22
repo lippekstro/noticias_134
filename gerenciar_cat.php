@@ -2,11 +2,6 @@
 require_once "cabecalho.php";
 require_once "categoria.php";
 
-if(isset($_SESSION['usuario']) && $_SESSION['usuario']['nivel_acesso'] < 3){
-    header('location: index.php');
-}
-
-
 try {
     $lista = Categoria::listar();
 } catch (Exception $e) {
@@ -25,12 +20,12 @@ try {
                     <th>Editar</th>
                     <th>Deletar</th>
                 </tr>
-                <?php foreach($lista as $categoria): ?>
-                <tr>
-                    <td><?= $categoria['nome']?></td>
-                    <td><a href="edicao_categoria.php?id_categoria=<?=$categoria['id_categoria']?>"><span class="material-symbols-outlined" id="btn_edit">edit</span></a></td>
-                    <td><a href="delete_categoria_controller.php?id_categoria=<?=$categoria['id_categoria']?>"><span class="material-symbols-outlined" id="btn_delete">delete</span></a></td>
-                </tr>
+                <?php foreach ($lista as $categoria) : ?>
+                    <tr>
+                        <td><?= $categoria['nome'] ?></td>
+                        <td><a href="edicao_categoria.php?id_categoria=<?= $categoria['id_categoria'] ?>"><span class="material-symbols-outlined" id="btn_edit">edit</span></a></td>
+                        <td><a href="delete_categoria_controller.php?id_categoria=<?= $categoria['id_categoria'] ?>"><span class="material-symbols-outlined" id="btn_delete">delete</span></a></td>
+                    </tr>
                 <?php endforeach; ?>
             </thead>
         </table>

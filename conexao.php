@@ -1,14 +1,14 @@
 <?php
 
-    require_once 'config.php';
+require_once 'config.php';
 
 
-    class Conexao
+class Conexao
+{
+    public static function conectar()
     {
-        public static function conectar()
-        {
-            $conn = new PDO(DB_DRIVE . ":host=" . NOME_SERVIDOR . ";dbname=" . NOME_BANCO, USUARIO, SENHA);
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            return $conn;
-        }
+        $conn = new PDO(DB_DRIVE . ":host=" . NOME_SERVIDOR . ";dbname=" . NOME_BANCO, USUARIO, SENHA);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        return $conn;
     }
+}

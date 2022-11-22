@@ -2,10 +2,6 @@
 require_once "cabecalho.php";
 require_once "usuario.php";
 
-if(isset($_SESSION['usuario']) && $_SESSION['usuario']['nivel_acesso'] < 3){
-    header('location: index.php');
-}
-
 try {
     $lista = Usuario::listar();
 } catch (Exception $e) {
