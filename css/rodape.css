@@ -3,9 +3,7 @@
 footer {
     width: 100%;
     height: 7rem;
-    background: #5ce1e6;
-    background: -webkit-linear-gradient(to right, #5ce1e6, #5271ff, #5217eb);
-    background: linear-gradient(to right, #5ce1e6, #5271ff, #5217eb);
+    background-color: black;
 
     display: flex;
     justify-content: center;

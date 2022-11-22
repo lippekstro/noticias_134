@@ -1,5 +1,5 @@
 .navbar {
-    background-image: linear-gradient(to right, #5ce1e6, #5e17eb);
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,7 +118,7 @@ li a {
 
 .container-menu-global {
     width: 100%;
-    border-top: 1px groove rgba(0, 0, 0, 0.498);
+    border-top: 1px groove white;
 }
 
 .menu-global {
