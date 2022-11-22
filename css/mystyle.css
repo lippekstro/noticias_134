@@ -1,4 +1,4 @@
-.label-usuario {
+/*.label-usuario {
   margin-top: 15px;
 }
 
@@ -73,13 +73,11 @@ th a {
 .lista-dados {
   display: flex;
   align-items: center;
-  width: 70%;
-  margin: auto;
-
-
+  margin: 12px;
+  justify-content: center;
 }
 
-thead {
+.lista-dados thead {
   background-color: rgba(33, 33, 33, 0.838)
 }
 
@@ -96,6 +94,10 @@ thead {
   background-color: rgba(27, 172, 172, 0);
   border: none;
   color: rgb(0, 0, 0);
+}
+
+#lupa span {
+  color: black;
 }
 
 #lupa a {
@@ -208,11 +210,6 @@ td {
   color: rgb(0, 0, 0);
 }
 
-#lupa {
-  background-color: rgba(27, 172, 172, 0);
-  border: none;
-  color: rgb(0, 0, 0);
-}
 
 #lupa a {
   color: rgb(0, 0, 0);
@@ -265,4 +262,4 @@ td {
   width: 80px;
   opacity: 0.9;
   margin-top: 1.5vw;
-}
+}*/
