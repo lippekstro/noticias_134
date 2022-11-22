@@ -2,10 +2,23 @@
 require_once "cabecalho.php";
 require_once "postagem.php";
 
-try {
-    $lista = Postagem::listar();
-} catch (Exception $e) {
-    echo $e->getMessage();
+
+if (isset($_SESSION['usuario']) && $_SESSION['usuario']['nivel_acesso'] < 2) {
+    header('location: index.php');
+}
+
+if (isset($_SESSION['usuario']) && $_SESSION['usuario']['nivel_acesso'] == 2) {
+    try {
+        $lista = Postagem::listarPorAutor($_SESSION['usuario']['id_usuario']);
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+} else {
+    try {
+        $lista = Postagem::listar();
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
 }
 ?>
 <div id="flex">
