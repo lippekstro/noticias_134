@@ -3,14 +3,14 @@ require_once 'categoria.php';
 require_once 'conexao.php';
 
 
-try{
+try {
     $nome_categoria = $_POST['nome'];
     $categoria = new Categoria();
     $categoria->nome_categoria = $nome_categoria;
     $categoria->criar();
-    
+
     //setcookie("adicionar", true);
     header("Location: index.php");
-}catch (PDOException $e) {
+} catch (PDOException $e) {
     echo $e->getMessage();
 }

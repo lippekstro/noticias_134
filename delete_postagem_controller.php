@@ -2,28 +2,15 @@
 require_once 'postagem.php';
 require_once 'conexao.php';
 
-$id_post = $_GET ['id_post'];
+$id_post = $_GET['id_post'];
 
 
-try{
+try {
     $post = new Postagem($id_post);
-    $post-> deletar();
-    setcookie("deletar", true);
+    $post->deletar();
+    
+    //setcookie("deletar", true);
     header("Location: index.php");
-}catch (PDOException $e) {
-    echo $query. "<br>" . $e->getMessage();
+} catch (PDOException $e) {
+    echo $e->getMessage();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>

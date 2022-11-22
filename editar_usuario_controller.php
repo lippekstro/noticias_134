@@ -1,5 +1,4 @@
 <?php
-
 require_once 'usuario.php';
 require_once 'conexao.php';
 

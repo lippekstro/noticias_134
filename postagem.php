@@ -47,8 +47,6 @@ class Postagem
         $stmt->execute();
     }
 
-
-
     public function editar_postagem()
     {
         $query = "UPDATE postagem SET titulo = :titulo, conteudo = :conteudo, id_categoria = :id_categoria WHERE id_post = :id_post";
@@ -92,6 +90,7 @@ class Postagem
         $lista = $stmt->fetchAll();
         return $lista;
     }
+
     public static function listarPorid($id)
     {
         $query = "select p.id_post, p.titulo, p.conteudo, p.imagem, p.data_pub,
@@ -109,7 +108,22 @@ class Postagem
         return $lista;
     }
 
-
+    public static function listarPorAutor($id)
+    {
+        $query = "select p.id_post, p.titulo, p.conteudo, p.imagem, p.data_pub,
+        p.id_categoria, p.id_post,
+        c.nome as nome_categoria,
+        u.nome as nome_autor from postagem p
+        inner join categoria c on p.id_categoria = c.id_categoria
+        inner join usuario u on p.id_usuario = u.id_usuario
+        where p.id_usuario = :id";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(":id", $id);
+        $stmt->execute();
+        $lista = $stmt->fetchAll();
+        return $lista;
+    }
 
     public function deletar()
     {

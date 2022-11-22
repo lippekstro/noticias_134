@@ -1,6 +1,7 @@
 <?php
 require_once 'categoria.php';
 require_once 'conexao.php';
+session_start();
 
 try {
     $lista_categorias = Categoria::listar();
@@ -54,15 +55,21 @@ try {
 
                         <div class="dropdown">
                             <a href="login.php"><span id="account_circle" class="material-symbols-outlined">account_circle</span></a>
-                            <div class="dropdown-content">
-                                <ul id="menu-login-icone">
-                                    <li><a href="edita_usuario.php">Editar perfil</a></li>
-                                    <li><a href="gerenciar_cat.php">GER. categorias</a></li>
-                                    <li><a href="gerencia_usuario.php">GER. usuário</a></li>
-                                    <li><a href="gerenciamento_post.php">GER. postagem</a></li>
-                                    <li><a href="">Sair</a></li>
-                                </ul>
-                            </div>
+                            <?php if (isset($_SESSION['usuario'])) : ?>
+                                <div class="dropdown-content">
+                                    <ul id="menu-login-icone">
+                                        <li><a href="edita_usuario.php">Editar Perfil</a></li>
+                                        <?php if ($_SESSION['usuario']['nivel_acesso'] >= 2) : ?>
+                                            <li><a href="gerenciamento_post.php">GER. Postagem</a></li>
+                                        <?php endif; ?>
+                                        <?php if ($_SESSION['usuario']['nivel_acesso'] >= 3) : ?>
+                                            <li><a href="gerenciar_cat.php">GER. Categorias</a></li>
+                                            <li><a href="gerencia_usuario.php">GER. Usuário</a></li>
+                                        <?php endif; ?>
+                                        <li><a href="logout.php">Sair</a></li>
+                                    </ul>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+}
+
+
+.card-categ {
+  width: 60vw;
+  margin: auto;
+}
+
+.card-categoria {
+  width: 26vw;
+  height: 27vh;  /*530px 240px*/
+  margin: 150px auto 0;
+  background-color: #6a93ad5d;
+  box-shadow: 8px 7px 20px rgba(83, 83, 83, 0.192);
+  text-align:center;
+  font-size: 20px;
+  border-radius: 30px;
+}
+
+.criar-categoria {
+  flex-direction: column;
+  margin-top: 30px;
+  padding: 2vw;
+  position: relative;
+}
+
+.label-usuario{
+  margin-top: 15px;
+}
+
+#input-categoria {
+  border: none;
+  box-shadow: 8px 7px 20px rgba(83, 83, 83, 0.192);
+  outline: none;
+  width: 45%;
+  height: 28px;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+#nome:hover {
+  transform:scale(1.1);
+}
+
+.card-categoria .img-usuario {
+  position: relative;
+  height: 46px;
+}
+
+#butao-cadastrar {
+  margin: 20px;
+  width: 70%;
+  height: 28px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  letter-spacing: 1.4px;
+  text-shadow: rgb(51, 51, 51) 0.1em 0.1em 0.2em;
+  color: hsl(207, 100%, 95%);
+  background: hsl(240, 29%, 50%);
+  border-radius: 8px;
+  box-shadow: 8px 7px 5px rgba(83, 83, 83, 0.192);
+  cursor: pointer;
+  background-image: linear-gradient(to right, hsl(199, 31%, 67%), hsl(199, 26%, 77%), hsl(199, 31%, 67%));
+}
+
+#butao-cadastrar:hover {
+  opacity: 0.8;
+  transform:scale(1.1);
+}
+
+
+.criar-cat {
+  margin: 20px 0px;
+  color: rgb(56, 56, 56);
+  font-family: 'Catamaran' , sans-serif;
+  text-shadow: rgba(135, 135, 135, 0.493) 0em 0em 0.8em;
+}

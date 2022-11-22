@@ -15,6 +15,7 @@ try {
     <div class="img-usuario">
         <img src="img/novo-usuario2.png" id="img-usuario">
     </div>
+
     <div class="criar-usuario">
         <form action="editar_usuario_admin_controller.php" method="post">
             <input type="hidden" name="id_usuario" value="<?= $usuario->id_usuario ?>">
@@ -35,7 +36,6 @@ try {
             </div>
         </form>
     </div>
-
 </div>
 
 <?php

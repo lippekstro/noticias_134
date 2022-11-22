@@ -21,7 +21,7 @@ require_once "cabecalho.php";
                 <input type="password" id="senha" name="senha">
             </div>
             <div>
-                <input type="submit" value="CADASTRAR" id="bottom-cadastrar">
+                <input type="submit" value="CADASTRAR" id="botao_cadastrar">
             </div>
         </form>
     </div>

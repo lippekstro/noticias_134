@@ -8,7 +8,7 @@ $nome_categoria = $_POST['categoria'];
 try {
     $categoria = new Categoria($id_categoria);
     $categoria->nome_categoria = $nome_categoria;
-    
+
     $categoria->editar();
 
     //setcookie("atualizado", true);

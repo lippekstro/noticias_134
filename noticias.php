@@ -12,25 +12,26 @@ try {
 
 
 ?>
-<div class="titulo_noticia_categoria">   <h1>
-    <?= $nome_categoria ?>
+<div class="titulo_noticia_categoria">
+    <h1>
+        <?= $nome_categoria ?>
     </h1>
 </div>
- 
-    <div class="flex">
-        <?php foreach ($lista as $item) : ?>
+
+<div class="flex">
+    <?php foreach ($lista as $item) : ?>
         <div class="card">
-            <a href="post_exibicao.php?id_post=<?=$item['id_post']?>">
-                <img src="https://source.unsplash.com/random?landscape,mountain" alt="Noticia">
+            <a href="post_exibicao.php?id_post=<?= $item['id_post'] ?>">
+                <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($item['imagem']); ?>" alt="Noticia">
                 <div class="container">
-                    <h4><b><?= $item['nome_categoria']?></b></h4>
+                    <h4><b><?= $item['nome_categoria'] ?></b></h4>
                     <p><?= $item['conteudo'] ?></p>
                 </div>
             </a>
         </div>
-        <?php endforeach; ?>
-    </div>
+    <?php endforeach; ?>
+</div>
 
-    <?php
-        require_once "rodape.php";
-    ?>
+<?php
+require_once "rodape.php";
+?>

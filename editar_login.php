@@ -26,10 +26,12 @@ require_once "cabecalho.php";
                     <button id="btn" type="submit">Confirma</button>
 
                 </div>
-    </div>
-    </fieldset>
-    </form>
-</div>
-</body>
 
-</html>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<?php
+require_once "rodape.php";
+?>
