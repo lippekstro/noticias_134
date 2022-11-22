@@ -2,14 +2,14 @@
 
 require_once 'postagem.php';
 require_once 'conexao.php';
+session_start();
 
 
 try{
     $postagem = new Postagem();
     $titulo = $_POST['titulo'];
     $conteudo = $_POST['conteudo'];
-    //$id_autor = $_POST['id_autor'];
-    $id_autor = 1;
+    $id_autor = $_SESSION['usuario']['id_usuario'];
     $id_categoria = $_POST['id_categoria'];
     if (!empty($_FILES['imagem']['tmp_name'])){
         $imagem = file_get_contents($_FILES['imagem']['tmp_name']);

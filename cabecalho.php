@@ -59,7 +59,7 @@ try {
                             <div class="dropdown-content">
                                 <ul id="menu-login-icone">
                                     <li><a href="edita_usuario.php">Editar perfil</a></li>
-                                    <?php if(isset($_SESSION['usuario'])&& $_SESSION['usuario']['nivel_acesso'] >= 3 ):?>
+                                    <?php if($_SESSION['usuario']['nivel_acesso'] >= 3 ):?>
                                     <li><a href="gerenciar_cat.php">GER. categorias</a></li>
                                     <li><a href="gerencia_usuario.php">GER. usuário</a></li>
                                     <li><a href="gerenciamento_post.php">GER. postagem</a></li> 

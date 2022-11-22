@@ -3,7 +3,7 @@ require_once "cabecalho.php";
 require_once "usuario.php";
 
 try {
-    $id_usuario = $_GET['id_usuario'];
+    $id_usuario = $_SESSION['usuario']['id_usuario'];
     $usuario = new Usuario($id_usuario);
 } catch (Exception $e) {
     echo $e->getMessage();

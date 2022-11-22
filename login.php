@@ -6,19 +6,19 @@ if(isset($_SESSION['usuario'])) {
 }
 
 if($_SERVER['REQUEST_METHOD'] == "POST") {
-    $email = $_REQUESTE['email'];
-    $senha = $_REQUESTE['senha'];
+    $email = $_REQUEST['email'];
+    $senha = $_REQUEST['senha'];
 
     try{
-        $query = "select * from usuario where email = :email LIMIT i";
-        $conexao = Coexao::conectar();
+        $query = "select * from usuario where email = :email LIMIT 1";
+        $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
-        $stmt->binValue(":email", $email);
+        $stmt->bindValue(":email", $email);
         $stmt->execute();
         $registro = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($stmt->rowCount()>0){
-            if(passoword_verify($senha, $registro['senha'])) {
+            if(password_verify($senha, $registro['senha'])) {
                 $_SESSION['usuario']['nome'] = $registro['nome'];
                 $_SESSION['usuario']['email'] = $registro['email'];
                 $_SESSION['usuario']['id_usuario'] = $registro['id_usuario'];
