@@ -11,24 +11,29 @@ try {
 
 ?>
 
-<div class="card-usuario">
-    <div class="img-usuario">
-        <img src="img/novo-usuario2.png" id="img-usuario">
-    </div>
-    
-    <div class="criar-usuario">
+<div class="flex">
+    <div class="card">
         <form action="editar_usuario_controller.php" method="post">
-            <input type="hidden" name="id_usuario" value="<?= $usuario->id_usuario ?>">
-            <div class="label-usuario">
-                <label for="nome">Nome: </label>
-                <input type="text" id="nome" name="nome" value="<?= $usuario->nome ?>">
-            </div>
-            <div class="label-usuario">
-                <label for="email">Email: </label>
-                <input type="text" id="email" name="email" value="<?= $usuario->email ?>">
-            </div>
-            <div>
-                <input type="submit" value="ATUALIZAR" id="bottom-cadastrar">
+            <div class="container-login">
+                <input type="hidden" name="id_usuario" value="<?= $usuario->id_usuario ?>">
+
+                <div class="container-icone-login">
+                    <span class="material-symbols-outlined">person</span>
+                </div>
+
+                <div class="campo-login">
+                    <label for="nome">Nome: </label>
+                    <input type="text" id="nome" name="nome" value="<?= $usuario->nome ?>">
+                </div>
+
+                <div class="campo-login">
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" name="email" value="<?= $usuario->email ?>">
+                </div>
+
+                <div>
+                    <button class="botao" type="submit">ATUALIZAR</button>
+                </div>
             </div>
         </form>
     </div>

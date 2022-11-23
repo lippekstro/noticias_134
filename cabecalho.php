@@ -26,14 +26,8 @@ try {
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cabecalho.css">
     <link rel="stylesheet" href="css/cards.css">
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/gerenc_post.css">
-    <link rel="stylesheet" href="css/gerenc_cat.css">
     <link rel="stylesheet" href="css/carrosel.css">
     <link rel="stylesheet" href="css/rodape.css">
-    <link rel="stylesheet" href="css/mystyle.css">
-    <link rel="stylesheet" href="css/edicao_categoria.css">
-    <link rel="stylesheet" href="css/cadastrar_post.css">
     <title>Noticias 134</title>
 </head>
 
@@ -55,7 +49,14 @@ try {
                         </form>
 
                         <div class="dropdown">
-                            <a href="login.php"><span id="account_circle" class="material-symbols-outlined">account_circle</span></a>
+                            <?php if (!isset($_SESSION['usuario'])) : ?>
+                                <a href="login.php"><span id="account_circle" class="material-symbols-outlined">account_circle</span></a>
+                            <?php else : ?>
+                                <div style="display: flex; align-items: center;">
+                                    <span style="color: white;">Olá, <?= $_SESSION['usuario']['nome'] ?></span>
+                                    <span id="account_circle" class="material-symbols-outlined">person</span>
+                                </div>
+                            <?php endif; ?>
                             <?php if (isset($_SESSION['usuario'])) : ?>
                                 <div class="dropdown-content">
                                     <ul id="menu-login-icone">

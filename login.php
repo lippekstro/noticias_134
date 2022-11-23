@@ -38,23 +38,31 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 ?>
 
-<div id="flex">
-    <div id="login">
+<div class="flex">
+    <div class="card">
         <form action="login.php" method="post">
-            <fieldset id="flex">
-                <span class="material-symbols-outlined" id="fontcad">person</span>
-                <div>
-                    <label for="nome">Email</label>
-                    <input type="name" id="email" name="email" value="" placeholder="seu email" autofocus>
-
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" name="senha" value="" placeholder="Digite sua Senha">
-
-                    <button id="btn" type="submit">Confirma</button>
-                    <p>Ainda não tem uma conta?</p>
-                    <a href="cadastro.php">Criar conta</a>
+            <div class="container-login">
+                <div class="container-icone-login">
+                    <span class="material-symbols-outlined">person</span>
                 </div>
-            </fieldset>
+
+                <div class="campo-login">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autofocus>
+                </div>
+
+                <div class="campo-login">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha">
+                </div>
+
+                <div>
+                    <button class="botao" type="submit">Confirma</button>
+                </div>
+
+                <p>Ainda não tem uma conta?</p>
+                <a href="cadastro.php">Criar conta</a>
+            </div>
         </form>
     </div>
 </div>

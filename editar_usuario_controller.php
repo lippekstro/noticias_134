@@ -1,6 +1,7 @@
 <?php
 require_once 'usuario.php';
 require_once 'conexao.php';
+session_start();
 
 try {
     $nome = $_POST['nome'];
@@ -12,6 +13,9 @@ try {
     $usuario->email = $email;
 
     $usuario->editar_usuario();
+
+    $_SESSION['usuario']['nome'] = $nome;
+    $_SESSION['usuario']['email'] = $email;
 
     header("Location: index.php");
 } catch (Exception $e) {

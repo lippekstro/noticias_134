@@ -1,33 +1,34 @@
 <?php
 require_once "cabecalho.php";
 ?>
-<div id="flex">
-    <div id="cadastro">
-        <form action="criar_usuario_controller.php" method="POST">
-            <fieldset id="flex">
-                <span class="material-symbols-outlined" id="fontcad">person</span>
 
-                <div>
-                    <label for="nome">NOME</label>
-                    <input type="text" id="nome" name="nome">
+<div class="flex">
+    <div class="card">
+        <form action="criar_usuario_controller.php" method="post">
+            <div class="container-login">
+                <div class="container-icone-login">
+                    <span class="material-symbols-outlined">person_add</span>
                 </div>
 
-
-                <div>
-                    <label for="email">E-MAIL</label>
-                    <input type="text" id="email" name="email">
+                <div class="campo-login">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" autofocus>
                 </div>
 
+                <div class="campo-login">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
 
-                <div>
-                    <label for="senha">SENHA</label>
+                <div class="campo-login">
+                    <label for="senha">Senha</label>
                     <input type="password" id="senha" name="senha">
                 </div>
 
                 <div>
-                    <button id="btn" type="submit">cadastre-se</button>
+                    <button class="botao" type="submit">Cadastrar</button>
                 </div>
-            </fieldset>
+            </div>
         </form>
     </div>
 </div>

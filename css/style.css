@@ -11,6 +11,10 @@ body {
   flex-direction: column;
 }
 
+label {
+  cursor: pointer;
+}
+
 #texto {
   border-radius: 15px;
   border: none;
@@ -160,12 +164,6 @@ textarea {
   color: white;
 }
 
-/*.exibicao_post {
-  align-items: center;
-  padding: 2cm;
-  margin: 2cm;
-
-}*/
 
 #cadastro {
   display: flex;
@@ -196,7 +194,9 @@ button {
 input {
   border-radius: 5px;
   height: 20px;
-
+  padding: 8px;
+  font-size: 1rem;
+  width: 100%;
 }
 
 fieldset {
@@ -225,4 +225,56 @@ fieldset {
   color: white;
   width: auto;
   font-size: 0.5cm;
+  margin: 4px;
+}
+/*----*/
+#noticia-aberta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 12px;
+}
+
+#noticia-aberta-cabecalho{
+  width: 75%;
+}
+
+#noticia-aberta-container-imagem{
+  display: flex;
+  justify-content: center;
+  margin: 12px;
+}
+
+#noticia-aberta-container-imagem img{
+  max-width: 100%;
+  max-height: 400px;
+}
+
+#noticia-aberta-container-conteudo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#noticia-aberta-container-conteudo p{
+  text-align: justify;
+  width: 75%;
+  text-indent: 2em;
+}
+
+.container-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-icone-login span{
+  color: black;
+  font-size: 5rem;
+}
+
+.campo-login{
+  margin: 12px;
 }
