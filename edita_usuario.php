@@ -22,12 +22,12 @@ try {
                 </div>
 
                 <div class="campo-login">
-                    <label for="nome">Nome: </label>
+                    <label for="nome">Nome</label>
                     <input type="text" id="nome" name="nome" value="<?= $usuario->nome ?>">
                 </div>
 
                 <div class="campo-login">
-                    <label for="email">Email: </label>
+                    <label for="email">Email</label>
                     <input type="email" id="email" name="email" value="<?= $usuario->email ?>">
                 </div>
 
@@ -38,6 +38,7 @@ try {
         </form>
     </div>
 </div>
+
 
 <?php
 require_once "rodape.php";

@@ -15,9 +15,10 @@ try {
 
 <div class="flex flex-coluna">
     <div class="flex-centralizado">
+        <h1>Gerenciamento de Usuários</h1>
         <form action="">
             <div class="container-busca">
-                <input type="search" name="busca" id="busca">
+                <input type="search" name="busca" id="busca" class="campos-busca">
                 <button type="submit">
                     <span class="material-symbols-outlined botao-busca">search</span>
                 </button>

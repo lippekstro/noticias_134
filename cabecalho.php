@@ -46,7 +46,7 @@ try {
                     <div class="conteiner-search">
                         <form id="pesquisa" action="">
                             <div class="conteiner-form-input-btn">
-                                <input size="40" type="search" name="busca" id="busca">
+                                <input size="40" type="search" name="busca" id="busca" class="campos-busca">
                                 <button type="submit"><span class="material-symbols-outlined">search</span></button>
                             </div>
                         </form>
@@ -84,7 +84,7 @@ try {
                 <ul class="menu-global">
                     <li><a href="index.php">Início</a></li>
                     <div class="dropdown">
-                        <li>Categoria</li>
+                        <li>Notícias</li>
                         <div class="dropdown-content">
                             <ul id="links-global">
                                 <?php foreach ($lista_categorias as $categoria) : ?>

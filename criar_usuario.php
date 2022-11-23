@@ -2,30 +2,35 @@
 require_once "cabecalho.php";
 ?>
 
-<div class="card-usuario">
-    <div class="img-usuario">
-        <img src="img/novo-usuario2.png" id="img-usuario">
-    </div>
-    <div class="criar-usuario">
+<div class="flex">
+    <div class="card">
         <form action="criar_usuario_controller.php" method="post">
-            <div class="label-usuario">
-                <label for="nome">Nome: </label>
-                <input type="text" id="nome" name="nome">
-            </div>
-            <div class="label-usuario">
-                <label for="email">Email: </label>
-                <input type="text" id="email" name="email">
-            </div>
-            <div class="label-usuario">
-                <label for="senha">Senha: </label>
-                <input type="password" id="senha" name="senha">
-            </div>
-            <div>
-                <input type="submit" value="CADASTRAR" id="botao_cadastrar">
+            <div class="container-login">
+                <div class="container-icone-login">
+                    <span class="material-symbols-outlined">person</span>
+                </div>
+
+                <div class="campo-login">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" autofocus>
+                </div>
+
+                <div class="campo-login">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="campo-login">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha">
+                </div>
+
+                <div>
+                    <button class="botao" type="submit">CADASTRAR</button>
+                </div>
             </div>
         </form>
     </div>
-
 </div>
 
 <?php

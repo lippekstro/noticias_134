@@ -17,35 +17,36 @@ try {
 }
 ?>
 
-<div class="container-flex">
-    <h1>Cadastro de Postagem</h1>
+<div class="flex flex-coluna flex-centro">
+    <h1>Edição de Postagem</h1>
     <form action="editar_postagem_controller.php" method="post">
-        <input type="hidden" name="id_postagem" value="<?= $postagem->id_post ?>">
-        <div class="container-flex">
-            <div class="container-input">
-                <div>
-                    <label for="titulo">TITULO</label>
-                    <input type="text" id="titulo" name="titulo" size="50" style="height: 30px;" value="<?= $postagem->titulo ?>">
-                </div>
-                <div style="display: flex; align-items:center;">
-                    <label for="id_categoria" style="margin-right: 4px;">CATEGORIA</label>
-                    <select name="id_categoria" id="id_categoria">
-                        <?php foreach ($lista as $categoria) :
-                            $verificaCat = $postagem->id_categoria == $categoria['id_categoria'];
-                            $selecionaCat = $verificaCat ? "selected='select'" : "";
-                        ?>
-                            <option value="<?= $categoria['id_categoria'] ?>" <?= $selecionaCat ?>><?= $categoria['nome'] ?></option>
-                        <?php endforeach ?>
-                    </select>
-                </div>
+        <div class="flex flex-coluna">
+            <input type="hidden" name="id_postagem" value="<?= $postagem->id_post ?>">
+
+            <div class="criar-post-input">
+                <label for="titulo">TITULO</label>
+                <input type="text" id="titulo" name="titulo" size="50" value="<?= $postagem->titulo ?>">
             </div>
 
-            <div>
-                <label for="conteudo">CONTEUDO</label>
-                <textarea id="conteudo" name="conteudo" cols="200" rows="20"><?= $postagem->conteudo ?>"</textarea>
+            <div class="criar-post-input">
+                <label for="id_categoria">CATEGORIA</label>
+                <select name="id_categoria" id="id_categoria">
+                    <?php foreach ($lista as $categoria) :
+                        $verificaCat = $postagem->id_categoria == $categoria['id_categoria'];
+                        $selecionaCat = $verificaCat ? "selected='select'" : "";
+                    ?>
+                        <option value="<?= $categoria['id_categoria'] ?>" <?= $selecionaCat ?>><?= $categoria['nome'] ?></option>
+                    <?php endforeach; ?>
+                </select>
             </div>
-            <div>
-                <button type="submit" class="botao">ATUALIZAR</button>
+
+            <div class="criar-post-input">
+                <label for="conteudo">CONTEUDO</label>
+                <textarea id="conteudo" name="conteudo" cols="200" rows="20"><?= $postagem->conteudo ?></textarea>
+            </div>
+
+            <div class="flex-autoalinhado-direita">
+                <button type="submit" class="botao">ATUALIZAR POST</button>
             </div>
         </div>
     </form>

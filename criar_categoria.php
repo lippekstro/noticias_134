@@ -2,20 +2,19 @@
 require_once "cabecalho.php";
 ?>
 
-<div class="card-categoria">
-    <div class="criar-usuario">
-        <h2 class="criar-cat">Criar uma nova Categoria</h2>
-
+<div class="flex">
+    <div class="card">
         <form action="criar_categoria_controller.php" method="post">
-            <div class="label-usuario">
-                <label for="nome"></label>
-                <input type="text" id="input-categoria" name="nome">
-            </div>
+            <div class="container-login">
+                <div class="campo-login">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" autofocus>
+                </div>
 
-            <div>
-                <input type="submit" value="CADASTRAR" id="botao_cadastrar">
+                <div>
+                    <button class="botao" type="submit">Confirma</button>
+                </div>
             </div>
-
         </form>
     </div>
 </div>

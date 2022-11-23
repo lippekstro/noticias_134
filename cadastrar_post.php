@@ -9,33 +9,34 @@ try {
 }
 ?>
 
-<div class="container-flex">
+<div class="flex flex-coluna flex-centro">
     <h1>Cadastro de Postagem</h1>
     <form action="criar_postagem_controller.php" method="post" enctype="multipart/form-data">
-        <div class="container-flex">
-            <div>
+        <div class="flex flex-coluna">
+            <div class="criar-post-input">
                 <input type="file" name="imagem" id="imagem">
             </div>
-            <div class="container-input">
-                <div>
-                    <label for="titulo">TITULO</label>
-                    <input type="text" id="titulo" name="titulo" size="50" style="height: 30px;">
-                </div>
-                <div style="display: flex; align-items:center;">
-                    <label for="id_categoria" style="margin-right: 4px;">CATEGORIA</label>
-                    <select name="id_categoria" id="id_categoria">
-                        <?php foreach ($lista as $categoria) : ?>
-                            <option value="<?= $categoria['id_categoria'] ?>"><?= $categoria['nome'] ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
+
+            <div class="criar-post-input">
+                <label for="titulo">TITULO</label>
+                <input type="text" id="titulo" name="titulo" size="50">
             </div>
 
-            <div>
+            <div class="criar-post-input">
+                <label for="id_categoria">CATEGORIA</label>
+                <select name="id_categoria" id="id_categoria">
+                    <?php foreach ($lista as $categoria) : ?>
+                        <option value="<?= $categoria['id_categoria'] ?>"><?= $categoria['nome'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+
+            <div class="criar-post-input">
                 <label for="conteudo">CONTEUDO</label>
                 <textarea id="conteudo" name="conteudo" cols="200" rows="20"></textarea>
             </div>
-            <div>
+
+            <div class="flex-autoalinhado-direita">
                 <button type="submit" class="botao">POSTAR</button>
             </div>
         </div>

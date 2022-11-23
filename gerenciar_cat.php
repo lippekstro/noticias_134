@@ -2,7 +2,7 @@
 require_once "cabecalho.php";
 require_once "categoria.php";
 
-if(isset($_SESSION['usuario']) && $_SESSION['usuario']['nivel_acesso'] < 3){
+if (isset($_SESSION['usuario']) && $_SESSION['usuario']['nivel_acesso'] < 3) {
     header('location: index.php');
 }
 
@@ -15,9 +15,10 @@ try {
 
 <div class="flex flex-coluna">
     <div class="flex-centralizado">
+        <h1>Gerenciamento de Categorias</h1>
         <form action="">
             <div class="container-busca">
-                <input type="search" name="busca" id="busca">
+                <input type="search" name="busca" id="busca" class="campos-busca">
                 <button type="submit">
                     <span class="material-symbols-outlined botao-busca">search</span>
                 </button>
@@ -29,7 +30,7 @@ try {
         <thead>
             <tr>
                 <th>Nome</th>
-                <th colspan="2"><a href="criar_usuario.php"><span class="material-symbols-outlined botao-add">add</span></a></th>
+                <th colspan="2"><a href="criar_categoria.php"><span class="material-symbols-outlined botao-add">add</span></a></th>
             </tr>
         </thead>
 

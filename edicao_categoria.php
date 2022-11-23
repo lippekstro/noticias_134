@@ -10,17 +10,22 @@ try {
 }
 ?>
 
-<div id="flex">
-    <form action="editar_categoria_controller.php" method="POST">
+<div class="flex">
+    <div class="card">
+        <form action="editar_categoria_controller.php" method="post">
         <input type="hidden" name="id_categoria" value="<?= $categoria->id_categoria ?>">
-        <div id="nome">
-            <label for="">Nome da Categoria</label>
-            <input type="text" id="categoria" name="categoria" value="<?= $categoria->nome_categoria ?>">
-        </div>
-        <div>
-            <button id="btn" type="submit">Alterar</button>
-        </div>
-    </form>
+            <div class="container-login">
+                <div class="campo-login">
+                    <label for="categoria">Nome</label>
+                    <input type="text" id="categoria" name="categoria" value="<?= $categoria->nome_categoria ?>">
+                </div>
+
+                <div>
+                    <button class="botao" type="submit">Alterar</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>
 
 <?php

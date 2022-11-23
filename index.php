@@ -25,7 +25,7 @@ try {
 <div class="container-noticias">
     <h1>Ultimas Notícias</h1>
 
-    <div class="flex">
+    <div class="flex flex-wrap">
         <?php foreach ($lista as $item) : ?>
             <div class="card">
                 <a href="post_exibicao.php?id_post=<?= $item['id_post'] ?>">
