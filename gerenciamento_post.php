@@ -21,31 +21,42 @@ if (isset($_SESSION['usuario']) && $_SESSION['usuario']['nivel_acesso'] == 2) {
     }
 }
 ?>
-<div id="flex">
-    <div id="gerenc">
-        <h1 id="gp">Gerenciamento De Postagem</h1>
-        <button id="btn-add"><a href="cadastrar_post.php"><span class="material-symbols-outlined">add</span></a></button>
-        <table>
-            <thead>
-                <tr>
-                    <th>Tiulo</th>
-                    <th>Data</th>
-                    <th>Autor</th>
-                    <th>Editar</th>
-                    <th>Deletar</th>
-                </tr>
-                <?php foreach ($lista as $postagem) : ?>
-                    <tr>
-                        <td><?= $postagem['titulo'] ?></td>
-                        <td><?= $postagem['data_pub'] ?></td>
-                        <td><?= $postagem['nome_autor'] ?></td>
-                        <td><a href="editar_post.php?id_post=<?= $postagem['id_post'] ?>"><span class="material-symbols-outlined" id="btn_edit">edit</span></a></td>
-                        <td><a href="delete_postagem_controller.php?id_post=<?= $postagem['id_post'] ?>"><span class="material-symbols-outlined" id="btn_delete">delete</span></a></td>
-                    </tr>
-                <?php endforeach ?>
-            </thead>
-        </table>
+
+<div class="flex flex-coluna">
+    <div class="flex-centralizado">
+        <form action="">
+            <div class="container-busca">
+                <input type="search" name="busca" id="busca">
+                <button type="submit">
+                    <span class="material-symbols-outlined botao-busca">search</span>
+                </button>
+            </div>
+        </form>
     </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tiulo</th>
+                <th>Data</th>
+                <th>Autor</th>
+                <th colspan="2"><a href="criar_usuario.php"><span class="material-symbols-outlined botao-add">add</span></a></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <?php foreach ($lista as $postagem) : ?>
+                <tr>
+                    <td><?= $postagem['titulo'] ?></td>
+                    <td><?= $postagem['data_pub'] ?></td>
+                    <td><?= $postagem['nome_autor'] ?></td>
+                    <td><a href="editar_post.php?id_post=<?= $postagem['id_post'] ?>"><span class="material-symbols-outlined botao-edit">edit</span></a></td>
+                    <td><a href="delete_postagem_controller.php?id_post=<?= $postagem['id_post'] ?>"><span class="material-symbols-outlined botao-delete">delete_forever</span></a></td>
+                </tr>
+            <?php endforeach; ?>
+
+        </tbody>
+    </table>
 </div>
 
 <?php
