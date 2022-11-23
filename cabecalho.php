@@ -28,9 +28,10 @@ try {
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/carrosel.css">
     <link rel="stylesheet" href="css/rodape.css">
+    <link rel="stylesheet" href="css/tables.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/noticia_aberta.css">
-    <link rel="stylesheet" href="css/tables.css">
+    <link rel="stylesheet" href="css/sobre.css">
     <title>Noticias 134</title>
 </head>
 

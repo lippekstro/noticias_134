@@ -11,12 +11,6 @@
             </ul>
         </div>
     </div>
-
-    <article class="site">
-        <a>
-            <p class="site">www.noticias_134.com.br</p>
-        </a>
-    </article>
 </footer>
 
 <script src="js/carrosel.js"></script>

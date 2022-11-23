@@ -7,13 +7,14 @@
 }
 
 #noticia-aberta-cabecalho {
-    width: 75%;
+    width: 60%;
 }
 
 #noticia-aberta-container-imagem {
     display: flex;
     justify-content: center;
     margin: 12px;
+    width: 45%;
 }
 
 #noticia-aberta-container-imagem img {
@@ -23,12 +24,14 @@
 
 #noticia-aberta-container-conteudo {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     width: 100%;
 }
 
 #noticia-aberta-container-conteudo p {
     text-align: justify;
-    width: 75%;
+    width: 60%;
     text-indent: 2em;
 }

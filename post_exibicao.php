@@ -25,7 +25,13 @@ try {
         </div>
 
         <div id="noticia-aberta-container-conteudo">
-            <p><?= $noticia['conteudo'] ?></p>
+            <?php 
+            $conteudo = $noticia['conteudo']; 
+            $texto_quebrado = explode("<br />", nl2br($conteudo));
+            foreach ($texto_quebrado as $paragrafo):
+            ?>
+            <p><?= $paragrafo ?></p>
+            <?php endforeach; ?>
         </div>
     </div>
 <?php endforeach; ?>

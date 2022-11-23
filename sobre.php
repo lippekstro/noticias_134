@@ -28,17 +28,12 @@ require_once "cabecalho.php";
 
   <div id="container-valores">
     <h2>Valores</h2>
-    <ul class="listavalores" type="none">
-      <li>Ética
-      <li>
-      <li>Imparcialidade
-      <li>
-      <li>Seriedade
-      <li>
-      <li>Respeito
-      <li>
-      <li>Transparecia
-      <li>
+    <ul class="listavalores">
+      <li>Ética</li>
+      <li>Imparcialidade</li>
+      <li>Seriedade</li>
+      <li>Respeito</li>
+      <li>Transparecia</li>
     </ul>
   </div>
 </div>
