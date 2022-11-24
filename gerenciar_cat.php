@@ -5,18 +5,28 @@ require_once "categoria.php";
 if (isset($_SESSION['usuario']) && $_SESSION['usuario']['nivel_acesso'] < 3) {
     header('location: index.php');
 }
-
-try {
-    $lista = Categoria::listar();
-} catch (Exception $e) {
-    echo $e->getMessage();
+if (isset($_GET["busca"])){
+    try{
+        $lista = Categoria::listarPorNome($_GET["busca"]);
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+    
+}else {
+    try {
+        $lista = Categoria::listar();
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+    
 }
+
 ?>
 
 <div class="flex flex-coluna">
     <div class="flex-centralizado">
         <h1>Gerenciamento de Categorias</h1>
-        <form action="">
+        <form action="gerenciar_cat.php">
             <div class="container-busca">
                 <input type="search" name="busca" id="busca" class="campos-busca">
                 <button type="submit">
