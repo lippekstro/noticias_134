@@ -35,3 +35,21 @@
     width: 60%;
     text-indent: 2em;
 }
+
+@media screen and (max-width: 600px) {
+    #noticia-aberta {
+        margin: 1rem;
+    }
+
+    #noticia-aberta-cabecalho {
+        width: 100%;
+    }
+
+    #noticia-aberta-container-imagem {
+        width: 100%;
+    }
+
+    #noticia-aberta-container-conteudo p {
+        width: 100%;
+    }
+}

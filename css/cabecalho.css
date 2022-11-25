@@ -134,3 +134,34 @@ li a {
 .menu-global li {
     color: white;
 }
+
+@media screen and (max-width: 600px) {
+    .container-barra {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .conteiner-search {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-logo-div {
+        text-align: center;
+    }
+
+    #container-logo {
+        width: 20%;
+        margin: 4px 0;
+    }
+
+    #pesquisa {
+        margin: 4px 0;
+    }
+
+    #account_circle {
+        margin: 4px 0;
+    }
+}

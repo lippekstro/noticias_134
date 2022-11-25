@@ -32,7 +32,7 @@ label {
 }
 
 .container-noticias {
-  padding: 1cm;
+  padding: 1rem;
   margin-top: 20px;
 }
 
@@ -260,3 +260,8 @@ fieldset {
   margin: 12px 0;
 }
 
+@media screen and (max-width: 600px) {
+  body {
+    margin-bottom: 120px;
+  }
+}

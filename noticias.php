@@ -22,18 +22,18 @@ if (isset($_GET['busca'])) {
 
 ?>
 <div class="titulo_noticia_categoria">
-    <?php 
-    if (isset($_GET['busca'])) : 
-        ?>
+    <?php
+    if (isset($_GET['busca'])) :
+    ?>
         <h1>
             Resultados da busca pelo termo: <?= $_GET['busca'] ?>
         </h1>
-        <?php 
-        else:
-        ?>
-    <h1>
-        <?= $nome_categoria ?>
-    </h1>
+    <?php
+    else :
+    ?>
+        <h1>
+            <?= $nome_categoria ?>
+        </h1>
     <?php endif; ?>
 </div>
 
@@ -44,6 +44,7 @@ if (isset($_GET['busca'])) {
                 <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($item['imagem']); ?>" alt="Noticia">
                 <div class="container">
                     <h4><b><?= $item['nome_categoria'] ?></b></h4>
+                    <h4><b><?= $item['titulo'] ?></b></h4>
                     <?php
                     $conteudo = $item['conteudo'];
                     $texto_quebrado = explode(".", nl2br($conteudo));

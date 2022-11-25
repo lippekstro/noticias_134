@@ -39,8 +39,10 @@ try {
     <header>
         <div class="navbar">
             <div class="container-barra">
-                <div>
-                    <a href="index.php"><img id="container-logo" src="img/logo.png" alt=""></a>
+                <div class="container-logo-div">
+                    <a href="index.php">
+                        <img id="container-logo" src="img/logo.png" alt="">
+                    </a>
                 </div>
 
                 <div>
