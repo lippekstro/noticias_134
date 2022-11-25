@@ -32,7 +32,7 @@ try {
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/noticia_aberta.css">
     <link rel="stylesheet" href="css/sobre.css">
-    <title>Noticias 134</title>
+    <title>Global News</title>
 </head>
 
 <body>

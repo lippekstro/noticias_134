@@ -9,13 +9,23 @@ try {
     echo $e->getMessage();
 }
 
+try {
+    $imgs = Postagem::listarPorData();
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
+
 ?>
 
 <div class="container-carrosel">
     <div class="slide">
-        <div class="slides"><img src="https://source.unsplash.com/random?landscape,mountain" /></div>
-        <div class="slides"><img src="https://source.unsplash.com/random?landscape,night" /></div>
-        <div class="slides"><img src="https://source.unsplash.com/random?landscape,city" /></div>
+        <?php foreach ($imgs as $imagem) : ?>
+            <div class="slides">
+                <a href="post_exibicao.php?id_post=<?= $imagem['id_post'] ?>">
+                    <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($imagem['imagem']); ?>" />
+                </a>
+            </div>
+        <?php endforeach; ?>
 
         <button class="btn btn_direita"><span>&rArr;</span></button>
         <button class="btn btn_esquerda"><span>&lArr;</span></button>
@@ -32,7 +42,11 @@ try {
                     <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($item['imagem']); ?>" alt="Noticia">
                     <div class="container">
                         <h4><b><?= $item['titulo'] ?></b></h4>
-                        <p><?= $item['conteudo'] ?></p>
+                        <?php
+                        $conteudo = $item['conteudo'];
+                        $texto_quebrado = explode(".", nl2br($conteudo));
+                        ?>
+                        <p><?= $texto_quebrado[0] ?></p>
                     </div>
                 </a>
             </div>

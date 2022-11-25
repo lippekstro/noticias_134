@@ -67,7 +67,23 @@ class Postagem
         c.nome as nome_categoria,
         u.nome as nome_autor from postagem p
         inner join categoria c on p.id_categoria = c.id_categoria
-        inner join usuario u on p.id_usuario = u.id_usuario";
+        inner join usuario u on p.id_usuario = u.id_usuario
+        order by p.data_pub desc";
+        $conexao = Conexao::conectar();
+        $resultado = $conexao->query($query);
+        $lista = $resultado->fetchAll();
+        return $lista;
+    }
+
+    public static function listarPorData()
+    {
+        $query = "select p.id_post, p.titulo, p.conteudo, p.imagem, p.data_pub,
+        p.id_categoria, p.id_post,
+        c.nome as nome_categoria,
+        u.nome as nome_autor from postagem p
+        inner join categoria c on p.id_categoria = c.id_categoria
+        inner join usuario u on p.id_usuario = u.id_usuario
+        order by p.data_pub desc limit 3";
         $conexao = Conexao::conectar();
         $resultado = $conexao->query($query);
         $lista = $resultado->fetchAll();

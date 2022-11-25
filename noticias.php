@@ -25,7 +25,11 @@ try {
                 <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($item['imagem']); ?>" alt="Noticia">
                 <div class="container">
                     <h4><b><?= $item['nome_categoria'] ?></b></h4>
-                    <p><?= $item['conteudo'] ?></p>
+                    <?php
+                    $conteudo = $item['conteudo'];
+                    $texto_quebrado = explode(".", nl2br($conteudo));
+                    ?>
+                    <p><?= $texto_quebrado[0] ?></p>
                 </div>
             </a>
         </div>
