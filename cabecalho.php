@@ -45,7 +45,7 @@ try {
 
                 <div>
                     <div class="conteiner-search">
-                        <form id="pesquisa" action="">
+                        <form id="pesquisa" action="noticias.php">
                             <div class="conteiner-form-input-btn">
                                 <input size="40" type="search" name="busca" id="busca" class="campos-busca">
                                 <button type="submit"><span class="material-symbols-outlined">search</span></button>
