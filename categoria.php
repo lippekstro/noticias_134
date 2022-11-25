@@ -34,6 +34,17 @@ class Categoria
         $lista = $resultado->fetchAll();
         return $lista;
     }
+    public static function listarPorNome($palavra)
+    {
+        $palavra = "%" . $palavra . "%";
+        $query = "select * from categoria where nome like :palavra";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao ->prepare($query);
+        $stmt -> bindValue(":palavra",$palavra);
+        $stmt -> execute();
+        $lista = $stmt->fetchAll();
+        return $lista;
+    }
 
 
     public function criar()

@@ -173,3 +173,6 @@ class Postagem
         return $lista;
     }
 }
+
+
+
