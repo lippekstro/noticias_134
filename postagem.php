@@ -154,4 +154,22 @@ class Postagem
         $stmt->execute();
         // executa
     }
+
+    public static function listarPorPalavra($palavra)
+    {
+        $palavra = "%" . $palavra . "%";
+        $query = "select p.id_post, p.titulo, p.conteudo, p.imagem, p.data_pub,
+        p.id_categoria, p.id_post,
+        c.nome as nome_categoria,
+        u.nome as nome_autor from postagem p
+        inner join categoria c on p.id_categoria = c.id_categoria
+        inner join usuario u on p.id_usuario = u.id_usuario
+        where p.titulo like :palavra";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(":palavra", $palavra);
+        $stmt->execute();
+        $lista = $stmt->fetchAll();
+        return $lista;
+    }
 }
