@@ -5,12 +5,20 @@ require_once "usuario.php";
 if (isset($_SESSION['usuario']) && $_SESSION['usuario']['nivel_acesso'] < 3) {
     header('location: index.php');
 }
+if (isset($_GET["busca"])){
+    try{
+        $lista = Usuario::listarPorUsuario($_GET["busca"]);
+    }catch (Exception $e) {
+        echo $e->getMessage();
+    }
+}else {
+    try {
+        $lista = Usuario::listar();
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+ }
 
-try {
-    $lista = Usuario::listar();
-} catch (Exception $e) {
-    echo $e->getMessage();
-}
 ?>
 
 <div class="flex flex-coluna">
