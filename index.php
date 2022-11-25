@@ -45,8 +45,23 @@ try {
                         <?php
                         $conteudo = $item['conteudo'];
                         $texto_quebrado = explode(".", nl2br($conteudo));
+                        $parag_card = explode(" ", $texto_quebrado[0]);
+                        $contador = 0;
+                        if (count($parag_card) > 25) {
+                            foreach ($parag_card as $palavra) {
+                                $parag_card[0] = $parag_card[0] . " " . $palavra;
+                                $contador++;
+                                if ($contador > 25) {
+                                    break;
+                                }
+                            }
+                        } else {
+                            foreach ($parag_card as $palavra) {
+                                $parag_card[0] = $parag_card[0] . " " . $palavra;
+                            }
+                        }
                         ?>
-                        <p><?= $texto_quebrado[0] ?></p>
+                        <p><?= $parag_card[0] ?></p>
                     </div>
                 </a>
             </div>
