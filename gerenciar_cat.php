@@ -5,20 +5,18 @@ require_once "categoria.php";
 if (isset($_SESSION['usuario']) && $_SESSION['usuario']['nivel_acesso'] < 3) {
     header('location: index.php');
 }
-if (isset($_GET["busca"])){
-    try{
+if (isset($_GET["busca"])) {
+    try {
         $lista = Categoria::listarPorNome($_GET["busca"]);
     } catch (Exception $e) {
         echo $e->getMessage();
     }
-    
-}else {
+} else {
     try {
         $lista = Categoria::listar();
     } catch (Exception $e) {
         echo $e->getMessage();
     }
-    
 }
 
 ?>

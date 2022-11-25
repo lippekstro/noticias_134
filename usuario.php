@@ -84,15 +84,16 @@ class Usuario
         $lista = $resultado->fetchAll();
         return $lista;
     }
+
     public static function listarPorUsuario($palavra)
     {
-            $palavra = "%" . $palavra . "%";
-            $query = "select * from usuario where nome like :palavra";
-            $conexao = Conexao::conectar();
-            $stmt = $conexao->prepare($query);
-            $stmt->bindValue(":palavra", $palavra);
-            $stmt->execute();
-            $lista = $stmt->fetchAll();
-            return $lista;
+        $palavra = "%" . $palavra . "%";
+        $query = "select * from usuario where nome like :palavra";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(":palavra", $palavra);
+        $stmt->execute();
+        $lista = $stmt->fetchAll();
+        return $lista;
     }
 }
