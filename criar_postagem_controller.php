@@ -25,7 +25,7 @@ try{
 
   
 
-    header('Location: index.php');
+    header('Location: gerenciamento_post.php');
 
 }catch(Exception $e){
     echo $e->getMessage();

@@ -10,7 +10,7 @@ try {
     $nome->deletar();
 
     //setcookie("deletado",true);
-    header("Location: index.php");
+    header("Location: gerencia_usuario.php");
 } catch (PDOException $e) {
     echo $e->getMessage();
 }

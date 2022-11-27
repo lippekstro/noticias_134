@@ -2,6 +2,9 @@
 require_once "cabecalho.php";
 require_once "postagem.php";
 
+if (!isset($_SESSION['usuario'])) {
+    header('location: index.php');
+}
 
 if (isset($_SESSION['usuario']) && $_SESSION['usuario']['nivel_acesso'] < 2) {
     header('location: index.php');

@@ -15,7 +15,7 @@ try {
 
     $usuario->editar_admin();
 
-    header("Location: index.php");
+    header("Location: gerencia_usuario.php");
 } catch (Exception $e) {
     echo $e->getMessage();
 }

@@ -10,7 +10,7 @@ try {
     $post->deletar();
     
     //setcookie("deletar", true);
-    header("Location: index.php");
+    header("Location: gerenciamento_post.php");
 } catch (PDOException $e) {
     echo $e->getMessage();
 }

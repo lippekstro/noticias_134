@@ -12,7 +12,7 @@ try {
     $categoria->editar();
 
     //setcookie("atualizado", true);
-    header("location: index.php");
+    header("location: gerenciar_cat.php");
 } catch (PDOException $e) {
     echo $e->getMessage();
 }

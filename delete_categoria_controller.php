@@ -10,7 +10,7 @@ try{
     $nome_categoria->deletar();
 
     
-    header('Location: index.php');
+    header('Location: gerenciar_cat.php');
 }catch(Exception $e){
     echo $e->getMessage();
 

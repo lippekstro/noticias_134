@@ -10,7 +10,7 @@ try {
     $categoria->criar();
 
     //setcookie("adicionar", true);
-    header("Location: index.php");
+    header("Location: gerenciar_cat.php");
 } catch (PDOException $e) {
     echo $e->getMessage();
 }

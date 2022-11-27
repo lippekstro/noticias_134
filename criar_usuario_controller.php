@@ -16,7 +16,7 @@ try {
 
     $usuario->criar();
 
-    header("Location: login.php");
+    header("Location: gerencia_usuario.php");
 } catch (Exception $e) {
     echo $e->getMessage();
 }
