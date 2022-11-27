@@ -1,7 +1,7 @@
 create table usuario (
 id_usuario int not null auto_increment,
-nome varchar(45) not null,
-email varchar(45) not null,
+nome varchar(200) not null,
+email varchar(200) not null,
 senha varchar(200) not null,
 nivel_acesso int not null default 1,
 primary key (id_usuario)
@@ -15,7 +15,7 @@ primary key (id_categoria)
 
 create table postagem (
 id_post int not null auto_increment,
-titulo varchar(45) not null,
+titulo varchar(250) not null,
 conteudo varchar(5000) not null,
 imagem longblob,
 data_pub timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,

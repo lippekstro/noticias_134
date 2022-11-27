@@ -16,6 +16,8 @@ try {
 
     $usuario->criar();
 
+    setcookie("msg", "Usuario Cadastrado com Sucesso");
+    setcookie("CRIAR", true);
     header("Location: gerencia_usuario.php");
 } catch (Exception $e) {
     echo $e->getMessage();

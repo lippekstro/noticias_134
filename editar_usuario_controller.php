@@ -17,6 +17,8 @@ try {
     $_SESSION['usuario']['nome'] = $nome;
     $_SESSION['usuario']['email'] = $email;
 
+    setcookie("msg", "Usuario Atualizado");
+    setcookie("EDITAR", true);
     header("Location: index.php");
 } catch (Exception $e) {
     echo $e->getMessage();

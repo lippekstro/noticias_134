@@ -15,6 +15,8 @@ try {
 
     $usuario->editar_admin();
 
+    setcookie("msg", "Usuario Atualizado");
+    setcookie("EDITAR", true);
     header("Location: gerencia_usuario.php");
 } catch (Exception $e) {
     echo $e->getMessage();

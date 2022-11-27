@@ -11,7 +11,8 @@ try {
 
     $categoria->editar();
 
-    //setcookie("atualizado", true);
+    setcookie("msg", "Categoria Editada");
+    setcookie("EDITAR", true);
     header("location: gerenciar_cat.php");
 } catch (PDOException $e) {
     echo $e->getMessage();

@@ -9,7 +9,8 @@ try {
     $post = new Postagem($id_post);
     $post->deletar();
     
-    //setcookie("deletar", true);
+    setcookie("msg", "Postagem Deletada");
+    setcookie("DELETAR", true);
     header("Location: gerenciamento_post.php");
 } catch (PDOException $e) {
     echo $e->getMessage();

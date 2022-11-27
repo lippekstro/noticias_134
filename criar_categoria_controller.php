@@ -9,7 +9,8 @@ try {
     $categoria->nome_categoria = $nome_categoria;
     $categoria->criar();
 
-    //setcookie("adicionar", true);
+    setcookie("msg", "Categoria Criada com Sucesso");
+    setcookie("CRIAR", true);
     header("Location: gerenciar_cat.php");
 } catch (PDOException $e) {
     echo $e->getMessage();

@@ -19,6 +19,7 @@
     justify-content: center;
     width: fit-content;
     align-items: center;
+    width: 100%;
 }
 
 .container-busca button {
@@ -45,10 +46,6 @@ thead {
 }
 
 @media screen and (max-width: 600px) {
-    .container-busca {
-        width: 100%;
-    }
-
     .campos-busca {
         width: 50%;
     }

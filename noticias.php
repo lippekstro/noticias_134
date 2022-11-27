@@ -51,16 +51,12 @@ if (isset($_GET['busca'])) {
                     $parag_card = explode(" ", $texto_quebrado[0]);
                     $contador = 0;
                     if (count($parag_card) > 25) {
-                        foreach ($parag_card as $palavra) {
-                            $parag_card[0] = $parag_card[0] . " " . $palavra;
-                            $contador++;
-                            if ($contador > 25) {
-                                break;
-                            }
+                        for ($i=1; $i<26; $i++){
+                            $parag_card[0] .= " " . $parag_card[$i];
                         }
                     } else {
-                        foreach ($parag_card as $palavra) {
-                            $parag_card[0] = $parag_card[0] . " " . $palavra;
+                        for ($i=1; $i<count($parag_card); $i++){
+                            $parag_card[0] .= " " . $parag_card[$i];
                         }
                     }
                     ?>

@@ -9,7 +9,8 @@ try {
     $nome = new usuario($id_usuario); 
     $nome->deletar();
 
-    //setcookie("deletado",true);
+    setcookie("msg", "Usuario Deletado");
+    setcookie("DELETAR", true);
     header("Location: gerencia_usuario.php");
 } catch (PDOException $e) {
     echo $e->getMessage();

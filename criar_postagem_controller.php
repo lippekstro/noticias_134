@@ -24,6 +24,8 @@ try{
     $postagem->inserir();
 
   
+    setcookie("msg", "Nova Postagem Publicada");
+    setcookie("CRIAR", true);
 
     header('Location: gerenciamento_post.php');
 

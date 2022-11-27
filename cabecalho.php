@@ -32,6 +32,7 @@ try {
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/noticia_aberta.css">
     <link rel="stylesheet" href="css/sobre.css">
+    <link rel="stylesheet" href="css/toast.css">
     <title>Global News</title>
 </head>
 
@@ -102,3 +103,4 @@ try {
         </div>
     </header>
     <main>
+        <div id="toast"></div>

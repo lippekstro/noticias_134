@@ -13,7 +13,14 @@
     </div>
 </footer>
 
-<script src="js/carrosel.js"></script>
+<?php if (isset($_COOKIE['msg'])) : ?>
+    <script src="js/script.js"></script>
+<?php endif; ?>
+
+<?php if ($_SERVER['PHP_SELF'] == '/noticias_134/index.php') : ?>
+    <script src="js/carrosel.js"></script>
+<?php endif; ?>
+
 </body>
 
 </html>

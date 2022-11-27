@@ -9,7 +9,8 @@ try{
 
     $nome_categoria->deletar();
 
-    
+    setcookie("msg", "Categoria Deletada");
+    setcookie("DELETAR", true);
     header('Location: gerenciar_cat.php');
 }catch(Exception $e){
     echo $e->getMessage();

@@ -15,7 +15,8 @@ try {
 
     $postagem->editar_postagem();
     
-    //setcookie("atualizado", true);
+    setcookie("msg", "Postagem Atualizada");
+    setcookie("EDITAR", true);
     header("location: gerenciamento_post.php");
 } catch (PDOException $e) {
     echo $e->getMessage();
