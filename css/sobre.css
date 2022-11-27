@@ -1,40 +1,41 @@
 .quemsomos {
   font-size: 18px;
-} 
+}
 
 .titulo {
   color: blue;
+  text-align: center;
+  margin: 12px 0;
 }
 
 #centro {
   width: 60vw;
   margin: auto;
-  
+
+}
+
+.container-quem {
+  text-align: center;
 }
 
 .sobre {
-  padding: 40px;
-  display:flex;
+  display: flex;
   text-align: center;
   justify-items: center;
-  flex-wrap:nowrap;
+  flex-wrap: nowrap;
 
 }
 
 .block {
-  margin: 20px;
-  height: 200px;
-  flex-direction:row;
-  flex-wrap:wrap;
-  justify-content:space-between;
-  align-items:center;
-  padding-left: 5%;
-  padding-right: 5%;
+  margin: 1rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
 p {
-  margin-top: 20px;
   font-size: 18px;
 }
 
@@ -43,8 +44,6 @@ h2 {
 }
 
 .listavalores {
-  margin-top: 30px;
-  margin-bottom: 20px;
   font-size: 18px;
   text-align: center;
 
@@ -58,7 +57,7 @@ h2 {
 
 }
 
-.obj {
+.objetivo {
   text-align: center;
   margin-left: 12%;
   margin-right: 12%;
@@ -67,17 +66,18 @@ h2 {
 }
 
 .valores {
-color: black;
+  color: black;
 
 }
 
 .post {
-text-align: center;
-padding: 20px;
-/*border: 1px solid black;*/
-height: 100vw
+  text-align: center;
+  padding: 20px;
+  /*border: 1px solid black;*/
+  height: 100vw
 }
 
-#container-valores{
-text-align: center;
+#container-valores {
+  text-align: center;
+  margin: 12px 0;
 }

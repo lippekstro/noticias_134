@@ -43,3 +43,18 @@ table {
 thead {
     background-color: rgb(158 158 158 / 60%);
 }
+
+@media screen and (max-width: 600px) {
+    .container-busca {
+        width: 100%;
+    }
+
+    .campos-busca {
+        width: 50%;
+    }
+
+    label {
+        text-align: left;
+        display: block;
+    }
+  }

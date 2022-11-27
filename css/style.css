@@ -24,6 +24,7 @@ label {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
+  margin: 1rem 0;
 }
 
 .container-nav {
@@ -180,6 +181,7 @@ textarea {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 1rem 0;
 
 }
 
@@ -263,5 +265,9 @@ fieldset {
 @media screen and (max-width: 600px) {
   body {
     margin-bottom: 120px;
+  }
+
+  .criar-post-input {
+    margin: 12px 4px;
   }
 }
