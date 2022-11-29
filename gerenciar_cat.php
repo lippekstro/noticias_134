@@ -54,7 +54,6 @@ if (isset($_GET["busca"])) {
                     <td><a href="delete_categoria_controller.php?id_categoria=<?= $categoria['id_categoria'] ?>"><span class="material-symbols-outlined botao-delete">delete_forever</span></a></td>
                 </tr>
             <?php endforeach; ?>
-
         </tbody>
     </table>
 </div>

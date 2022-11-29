@@ -58,7 +58,6 @@ if (isset($_SESSION['usuario']) && $_SESSION['usuario']['nivel_acesso'] == 2) {
                     <td><a href="delete_postagem_controller.php?id_post=<?= $postagem['id_post'] ?>"><span class="material-symbols-outlined botao-delete">delete_forever</span></a></td>
                 </tr>
             <?php endforeach; ?>
-
         </tbody>
     </table>
 </div>

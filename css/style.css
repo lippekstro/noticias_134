@@ -242,6 +242,7 @@ fieldset {
 
 .flex-centralizado {
   align-self: center;
+  text-align: center;
 }
 
 .flex-wrap {

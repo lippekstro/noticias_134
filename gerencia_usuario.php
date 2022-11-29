@@ -59,7 +59,6 @@ if (isset($_GET["busca"])) {
                     <td><a href="delete_usuario_controller.php?id_usuario=<?= $usuario['id_usuario'] ?>"><span class="material-symbols-outlined botao-delete">delete_forever</span></a></td>
                 </tr>
             <?php endforeach; ?>
-
         </tbody>
     </table>
 </div>
