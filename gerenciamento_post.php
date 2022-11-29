@@ -23,6 +23,25 @@ if (isset($_SESSION['usuario']) && $_SESSION['usuario']['nivel_acesso'] == 2) {
         echo $e->getMessage();
     }
 }
+
+if (isset($_GET["busca"]) ){
+     
+if ($_SESSION['usuario']['nivel_acesso'] ==2) {
+    try {
+        $lista = Postagem::listarPorAutorPalavra($_SESSION ['usuario']['id_usuario'], $_GET["busca"]);
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+} else { 
+    try {
+        $lista = Postagem::listarPorPalavra($_GET["busca"]);
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+
+}
+}
+
 ?>
 
 <div class="flex flex-coluna">
