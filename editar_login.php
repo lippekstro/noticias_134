@@ -12,7 +12,7 @@ require_once "cabecalho.php";
                     <input type="name" id="name" name="name" value="" placeholder="Editar email" autofocus>
 
                     <label for="nome">Nome</label>
-                    <input type="name" id="name" name="name" value="" placeholder="Editar Nome" autofocus>
+                    <input type="name" id="name" name="name" value="" placeholder="Editar Nome">
 
                     <label for="senha">Senha</label>
                     <input type="password" id="senha" name="senha" value="" placeholder="Trocar senha">
@@ -21,7 +21,7 @@ require_once "cabecalho.php";
                     <input type="password" id="senha" name="senha" value="" placeholder="Tonfirma senha">
 
                     <label for="nome">Nivel</label>
-                    <input type="number" id="name" name="name" value="" placeholder="Nilvel" autofocus>
+                    <input type="number" id="name" name="name" value="" placeholder="Nivel">
 
                     <button id="btn" type="submit">Confirma</button>
 

@@ -24,22 +24,21 @@ if (isset($_SESSION['usuario']) && $_SESSION['usuario']['nivel_acesso'] == 2) {
     }
 }
 
-if (isset($_GET["busca"]) ){
-     
-if ($_SESSION['usuario']['nivel_acesso'] ==2) {
-    try {
-        $lista = Postagem::listarPorAutorPalavra($_SESSION ['usuario']['id_usuario'], $_GET["busca"]);
-    } catch (Exception $e) {
-        echo $e->getMessage();
-    }
-} else { 
-    try {
-        $lista = Postagem::listarPorPalavra($_GET["busca"]);
-    } catch (Exception $e) {
-        echo $e->getMessage();
-    }
+if (isset($_GET["busca"])) {
 
-}
+    if ($_SESSION['usuario']['nivel_acesso'] == 2) {
+        try {
+            $lista = Postagem::listarPorAutorPalavra($_SESSION['usuario']['id_usuario'], $_GET["busca"]);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    } else {
+        try {
+            $lista = Postagem::listarPorPalavra($_GET["busca"]);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
 }
 
 ?>
@@ -51,7 +50,7 @@ if ($_SESSION['usuario']['nivel_acesso'] ==2) {
             <div class="container-busca">
                 <input type="search" name="busca" id="busca" class="campos-busca">
                 <button type="submit">
-                    <span class="material-symbols-outlined botao-busca">search</span>
+                    <img class="icone-preto icone-pequeno" src="img/lupa.png" alt="lupa de pesquisa">
                 </button>
             </div>
         </form>
@@ -63,7 +62,11 @@ if ($_SESSION['usuario']['nivel_acesso'] ==2) {
                 <th>Tiulo</th>
                 <th>Data</th>
                 <th>Autor</th>
-                <th colspan="2"><a href="cadastrar_post.php"><span class="material-symbols-outlined botao-add">add</span></a></th>
+                <th colspan="2">
+                    <a href="cadastrar_post.php">
+                        <img class="icone-pequeno icone-verde" src="img/add.png" alt="adicionar">
+                    </a>
+                </th>
             </tr>
         </thead>
 
@@ -73,8 +76,16 @@ if ($_SESSION['usuario']['nivel_acesso'] ==2) {
                     <td><?= $postagem['titulo'] ?></td>
                     <td><?= $postagem['data_pub'] ?></td>
                     <td><?= $postagem['nome_autor'] ?></td>
-                    <td><a href="editar_post.php?id_post=<?= $postagem['id_post'] ?>"><span class="material-symbols-outlined botao-edit">edit</span></a></td>
-                    <td><a href="delete_postagem_controller.php?id_post=<?= $postagem['id_post'] ?>"><span class="material-symbols-outlined botao-delete">delete_forever</span></a></td>
+                    <td>
+                        <a href="editar_post.php?id_post=<?= $postagem['id_post'] ?>">
+                            <img class="icone-pequeno icone-azul" src="img/editar.png" alt="editar">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="delete_postagem_controller.php?id_post=<?= $postagem['id_post'] ?>">
+                            <img class="icone-pequeno icone-vermelho" src="img/deletar.png" alt="deletar">
+                        </a>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

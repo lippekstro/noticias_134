@@ -7,7 +7,7 @@ require_once "cabecalho.php";
         <form action="criar_usuario_controller.php" method="post">
             <div class="container-login">
                 <div class="container-icone-login">
-                    <span class="material-symbols-outlined">person_add</span>
+                    <img class="icone-pequeno icone-preto" src="img/person_add.png" alt="">
                 </div>
 
                 <div class="campo-login">

@@ -18,7 +18,7 @@ try {
                 <input type="hidden" name="id_usuario" value="<?= $usuario->id_usuario ?>">
 
                 <div class="container-icone-login">
-                    <span class="material-symbols-outlined">person</span>
+                    <img class="icone-pequeno icone-preto" src="img/pessoa.png" alt="">
                 </div>
 
                 <div class="campo-login">

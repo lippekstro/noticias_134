@@ -1,17 +1,18 @@
-.botao-edit {
-    color: blue;
+.icone-azul {
+    filter: invert(8%) sepia(100%) saturate(7009%) hue-rotate(247deg) brightness(99%) contrast(143%);
 }
 
-.botao-delete {
-    color: red;
+.icone-vermelho {
+    filter: invert(14%) sepia(96%) saturate(5711%) hue-rotate(358deg) brightness(102%) contrast(111%);
 }
 
-.botao-busca {
-    color: black;
+
+.icone-verde {
+    filter: invert(30%) sepia(36%) saturate(7411%) hue-rotate(128deg) brightness(105%) contrast(105%);
 }
 
-.botao-add {
-    color: green;
+.icone-preto {
+    filter: invert(0%) sepia(83%) saturate(7500%) hue-rotate(231deg) brightness(110%) contrast(115%);
 }
 
 .container-busca {
@@ -54,4 +55,4 @@ thead {
         text-align: left;
         display: block;
     }
-  }
+}

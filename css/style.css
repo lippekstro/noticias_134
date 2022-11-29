@@ -263,6 +263,13 @@ fieldset {
   margin: 12px 0;
 }
 
+.icone-branco {
+  filter: invert(100%) sepia(0%) saturate(3286%) hue-rotate(265deg) brightness(124%) contrast(105%);
+} 
+.icone-pequeno {
+  width: 2rem;
+}
+
 @media screen and (max-width: 600px) {
   body {
     margin-bottom: 120px;

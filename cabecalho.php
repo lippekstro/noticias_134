@@ -51,17 +51,21 @@ try {
                         <form id="pesquisa" action="noticias.php">
                             <div class="conteiner-form-input-btn">
                                 <input size="40" type="search" name="busca" id="busca" class="campos-busca">
-                                <button type="submit"><span class="material-symbols-outlined">search</span></button>
+                                <button type="submit">
+                                    <img class="icone-branco icone-pequeno" src="img/lupa.png" alt="lupa de pesquisa">
+                                </button>
                             </div>
                         </form>
 
                         <div class="dropdown">
                             <?php if (!isset($_SESSION['usuario'])) : ?>
-                                <a href="login.php"><span id="account_circle" class="material-symbols-outlined">account_circle</span></a>
+                                <a href="login.php">
+                                <img class="icone-branco icone-pequeno" src="img/conta_circulo.png" alt="">
+                                </a>
                             <?php else : ?>
                                 <div style="display: flex; align-items: center;">
                                     <span style="color: white;">Olá, <?= $_SESSION['usuario']['nome'] ?></span>
-                                    <span id="account_circle" class="material-symbols-outlined">person</span>
+                                    <img class="icone-branco icone-pequeno" src="img/pessoa.png" alt="">
                                 </div>
                             <?php endif; ?>
                             <?php if (isset($_SESSION['usuario'])) : ?>

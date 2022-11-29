@@ -32,7 +32,7 @@ if (isset($_GET["busca"])) {
             <div class="container-busca">
                 <input type="search" name="busca" id="busca" class="campos-busca">
                 <button type="submit">
-                    <span class="material-symbols-outlined botao-busca">search</span>
+                    <img class="icone-preto icone-pequeno" src="img/lupa.png" alt="lupa de pesquisa">
                 </button>
             </div>
         </form>
@@ -44,7 +44,11 @@ if (isset($_GET["busca"])) {
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Nivel de Acesso</th>
-                <th colspan="2"><a href="criar_usuario.php"><span class="material-symbols-outlined botao-add">add</span></a></th>
+                <th colspan="2">
+                    <a href="criar_usuario.php">
+                        <img class="icone-pequeno icone-verde" src="img/add.png" alt="adicionar">
+                    </a>
+                </th>
             </tr>
         </thead>
 
@@ -55,8 +59,16 @@ if (isset($_GET["busca"])) {
                     <td><?= $usuario['email'] ?></td>
                     <td><?= $usuario['nivel_acesso'] ?></td>
 
-                    <td><a href="edita_usuario_admin.php?id_usuario=<?= $usuario['id_usuario'] ?>"><span class="material-symbols-outlined botao-edit">edit</span></a></td>
-                    <td><a href="delete_usuario_controller.php?id_usuario=<?= $usuario['id_usuario'] ?>"><span class="material-symbols-outlined botao-delete">delete_forever</span></a></td>
+                    <td>
+                        <a href="edita_usuario_admin.php?id_usuario=<?= $usuario['id_usuario'] ?>">
+                            <img class="icone-pequeno icone-azul" src="img/editar.png" alt="editar">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="delete_usuario_controller.php?id_usuario=<?= $usuario['id_usuario'] ?>">
+                            <img class="icone-pequeno icone-vermelho" src="img/deletar.png" alt="deletar">
+                        </a>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

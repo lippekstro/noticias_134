@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <form action="login.php" method="post">
             <div class="container-login">
                 <div class="container-icone-login">
-                    <span class="material-symbols-outlined">person</span>
+                    <img class="icone-pequeno icone-preto" src="img/pessoa.png" alt="">
                 </div>
 
                 <div class="campo-login">
