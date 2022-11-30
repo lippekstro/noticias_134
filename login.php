@@ -1,10 +1,6 @@
 <?php
 require_once "cabecalho.php";
 
-if (isset($_SESSION['usuario'])) {
-    header("location: index.php");
-}
-
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $email = $_REQUEST['email'];
     $senha = $_REQUEST['senha'];
@@ -36,6 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }
 }
 
+
+
 ?>
 
 <div class="flex">
@@ -43,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <form action="login.php" method="post">
             <div class="container-login">
                 <div class="container-icone-login">
-                    <img class="icone-pequeno icone-preto" src="img/pessoa.png" alt="">
+                    <img class="icone-pequeno icone-preto" src="img/pessoa.svg" alt="">
                 </div>
 
                 <div class="campo-login">

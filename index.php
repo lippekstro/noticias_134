@@ -27,8 +27,8 @@ try {
             </div>
         <?php endforeach; ?>
 
-        <button class="btn btn_direita"><span>&rArr;</span></button>
-        <button class="btn btn_esquerda"><span>&lArr;</span></button>
+        <button class="btn btn_direita"><span>&raquo;</span></button>
+        <button class="btn btn_esquerda"><span>&laquo;</span></button>
     </div>
 </div>
 

@@ -33,10 +33,12 @@ try {
     <link rel="stylesheet" href="css/noticia_aberta.css">
     <link rel="stylesheet" href="css/sobre.css">
     <link rel="stylesheet" href="css/toast.css">
+    <link rel="stylesheet" href="css/dark_mode.css">
+    <link rel="stylesheet" href="css/toggle.css">
     <title>Global News</title>
 </head>
 
-<body>
+<body id="corpo">
     <header>
         <div class="navbar">
             <div class="container-barra">
@@ -60,7 +62,7 @@ try {
                         <div class="dropdown">
                             <?php if (!isset($_SESSION['usuario'])) : ?>
                                 <a href="login.php">
-                                <img class="icone-branco icone-pequeno" src="img/conta_circulo.png" alt="">
+                                    <img class="icone-branco icone-pequeno" src="img/conta_circulo.png" alt="">
                                 </a>
                             <?php else : ?>
                                 <div style="display: flex; align-items: center;">

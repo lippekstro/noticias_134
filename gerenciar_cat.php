@@ -9,6 +9,7 @@ if (!isset($_SESSION['usuario'])) {
 if (isset($_SESSION['usuario']) && $_SESSION['usuario']['nivel_acesso'] < 3) {
     header('location: index.php');
 }
+
 if (isset($_GET["busca"])) {
     try {
         $lista = Categoria::listarPorNome($_GET["busca"]);
