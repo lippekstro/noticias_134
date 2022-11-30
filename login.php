@@ -1,6 +1,10 @@
 <?php
 require_once "cabecalho.php";
 
+if(isset($_SESSION['usuario'])){
+    header('location: index.php');
+}
+
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $email = $_REQUEST['email'];
     $senha = $_REQUEST['senha'];
