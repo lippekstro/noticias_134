@@ -25,8 +25,10 @@ try {
                     <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($imagem['imagem']); ?>" />
                 </a>
             </div>
+            
         <?php endforeach; ?>
 
+     
         <button class="btn btn_direita"><span>&raquo;</span></button>
         <button class="btn btn_esquerda"><span>&laquo;</span></button>
     </div>

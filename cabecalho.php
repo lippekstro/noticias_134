@@ -44,7 +44,7 @@ try {
             <div class="container-barra">
                 <div class="container-logo-div">
                     <a href="index.php">
-                        <img id="container-logo" src="img/logo.png" alt="">
+                        <img id="container-logo" src="img/globallogo.png" alt="">
                     </a>
                 </div>
 
