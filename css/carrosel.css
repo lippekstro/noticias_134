@@ -60,6 +60,17 @@
     margin-top: 40px;
 }
 
+.texto-carrossel {
+    color: black;
+    background-color: #a9a9a96b;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    text-align: center;
+}
+
 @media screen and (max-width: 600px) {
     .container-carrosel {
         margin: 1rem;

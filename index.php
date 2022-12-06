@@ -23,9 +23,9 @@ try {
             <div class="slides">
                 <a href="post_exibicao.php?id_post=<?= $imagem['id_post'] ?>">
                     <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($imagem['imagem']); ?>" />
+                    <h4 class="texto-carrossel"><?= $imagem['titulo'] ?></h4>
                 </a>
             </div>
-            
         <?php endforeach; ?>
 
      
