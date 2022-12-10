@@ -7,8 +7,9 @@ session_start();
 
 try{
     $postagem = new Postagem();
-    $titulo = $_POST['titulo'];
-    $conteudo = $_POST['conteudo'];
+
+    $titulo = htmlspecialchars($_POST['titulo']);
+    $conteudo = htmlspecialchars($_POST['conteudo']);
     $id_autor = $_SESSION['usuario']['id_usuario'];
     $id_categoria = $_POST['id_categoria'];
     if (!empty($_FILES['imagem']['tmp_name'])){

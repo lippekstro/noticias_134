@@ -4,21 +4,27 @@ require_once 'conexao.php';
 
 try {
     $usuario = new usuario();
-    
-    $nome = $_POST['nome'];
+
+    $nome = htmlspecialchars($_POST['nome']);
     $senha = $_POST['senha'];
-    $email = $_POST['email'];      
+    $email = htmlspecialchars($_POST['email']);
     $senha = password_hash($senha, PASSWORD_DEFAULT);
 
-    $usuario->nome = $nome;
-    $usuario->senha = $senha;
-    $usuario->email = $email;
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $usuario->nome = $nome;
+        $usuario->senha = $senha;
+        $usuario->email = $email;
 
-    $usuario->criar();
+        $usuario->criar();
 
-    setcookie("msg", "Usuario Cadastrado com Sucesso");
-    setcookie("CRIAR", true);
-    header("Location: gerencia_usuario.php");
+        setcookie("msg", "Usuario Cadastrado com Sucesso");
+        setcookie("CRIAR", true);
+        header("Location: gerencia_usuario.php");
+    } else {
+        setcookie("msg", "ERRO");
+        setcookie("CRIAR", true);
+        header("Location: gerencia_usuario.php");
+    }
 } catch (Exception $e) {
     echo $e->getMessage();
 }

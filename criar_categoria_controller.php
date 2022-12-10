@@ -4,7 +4,8 @@ require_once 'conexao.php';
 
 
 try {
-    $nome_categoria = $_POST['nome'];
+    $nome_categoria = htmlspecialchars($_POST['nome']);
+
     $categoria = new Categoria();
     $categoria->nome_categoria = $nome_categoria;
     $categoria->criar();

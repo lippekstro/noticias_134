@@ -2,8 +2,8 @@
 require_once 'conexao.php';
 require_once 'postagem.php';
 
-$titulo = $_POST['titulo'];
-$conteudo = $_POST['conteudo'];
+$titulo = htmlspecialchars($_POST['titulo']);
+$conteudo = htmlspecialchars($_POST['conteudo']);
 $id_categoria = $_POST['id_categoria'];
 $id_postagem = $_POST['id_postagem'];
 
