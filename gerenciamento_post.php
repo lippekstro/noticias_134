@@ -59,7 +59,7 @@ if (isset($_GET["busca"])) {
     <table>
         <thead>
             <tr>
-                <th>Tiulo</th>
+                <th>Título</th>
                 <th>Data</th>
                 <th>Autor</th>
                 <th colspan="2">

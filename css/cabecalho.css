@@ -44,9 +44,12 @@ li a {
     margin: 25px;
 }
 
+.container-logo-div{
+    width: 20%;
+}
+
 #container-logo {
-    width: 10%;
-    margin-left: 20px;
+    width: 100%;
 }
 
 .conteiner-search {
@@ -150,10 +153,11 @@ li a {
 
     .container-logo-div {
         text-align: center;
+        width: 50%;
     }
 
     #container-logo {
-        width: 20%;
+        width: 100%;
         margin: 4px 0;
     }
 

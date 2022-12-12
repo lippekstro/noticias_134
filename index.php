@@ -35,7 +35,7 @@ try {
 </div>
 
 <div class="container-noticias">
-    <h1>Ultimas Notícias</h1>
+    <h1>Últimas Notícias</h1>
 
     <div class="flex flex-wrap">
         <?php foreach ($lista as $item) : ?>

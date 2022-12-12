@@ -4,7 +4,7 @@ require_once "cabecalho.php";
 
 <div id="centro">
   <div class="titulo">
-    <h1>Sobre Nos</h1>
+    <h1>Sobre Nós</h1>
   </div>
 
   <div class="container-quem">
@@ -20,8 +20,8 @@ require_once "cabecalho.php";
     <div class="block">
       <h2>Missão</h2>
       <p>
-        Levar ao leitor informação de qualidade, fidelidade e integridade,
-        e que ajude a promover o conhecimento sobre turismo e seus impactos.
+        Levar ao leitor informação de qualidade, fidelidade, integridade,
+        e que ajude a promover o conhecimento.
       </p>
     </div>
 
@@ -50,7 +50,7 @@ require_once "cabecalho.php";
       <li>Imparcialidade</li>
       <li>Seriedade</li>
       <li>Respeito</li>
-      <li>Transparecia</li>
+      <li>Transparência</li>
     </ul>
   </div>
 </div>
