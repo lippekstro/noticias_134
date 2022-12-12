@@ -9,14 +9,14 @@ primary key (id_usuario)
 
 create table categoria (
 id_categoria int not null auto_increment,
-nome varchar(45) not null,
+nome varchar(200) not null,
 primary key (id_categoria)
 );
 
 create table postagem (
 id_post int not null auto_increment,
 titulo varchar(250) not null,
-conteudo varchar(5000) not null,
+conteudo longtext not null,
 imagem longblob,
 data_pub timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 id_usuario int not null,
