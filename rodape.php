@@ -21,7 +21,6 @@
     <script src="js/carrosel.js"></script>
 <?php endif; ?>
 
-<script src="js/dark_mode.js"></script>
 </body>
 
 </html>

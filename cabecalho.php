@@ -33,8 +33,6 @@ try {
     <link rel="stylesheet" href="css/noticia_aberta.css">
     <link rel="stylesheet" href="css/sobre.css">
     <link rel="stylesheet" href="css/toast.css">
-    <link rel="stylesheet" href="css/dark_mode.css">
-    <link rel="stylesheet" href="css/toggle.css">
     <title>Global News</title>
 </head>
 
